@@ -1,0 +1,2434 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veles Construction | Hale Przemysłowe i Generalne Wykonawstwo</title>
+    <meta name="description" content="Veles Construction - specjalista w budowie hal przemysłowych, magazynowych oraz instalacjach technologicznych. Europejski standard, polska realizacja.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://velesconstruction.pl/">
+    <meta property="og:title" content="Veles Construction | Hale Przemysłowe i Generalne Wykonawstwo">
+    <meta property="og:description" content="Specjalista w budowie hal przemysłowych, magazynowych oraz instalacjach technologicznych. Europejski standard, polska realizacja.">
+    <meta property="og:image" content="https://velesconstruction.pl/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://velesconstruction.pl/">
+    <meta property="twitter:title" content="Veles Construction | Hale Przemysłowe i Generalne Wykonawstwo">
+    <meta property="twitter:description" content="Specjalista w budowie hal przemysłowych, magazynowych oraz instalacjach technologicznych. Europejski standard, polska realizacja.">
+    <meta property="twitter:image" content="https://velesconstruction.pl/assets/og-image.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Colors - Dark Mode (Default) */
+            --bg-color: #0a0a0a;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B0B0B0;
+            --accent-red: #FF3131;
+            --accent-hover: #E02020;
+            --card-bg: #141414;
+            --border-color: rgba(255, 49, 49, 0.15);
+            --header-bg: rgba(10, 10, 10, 0.95);
+            --nav-link: #FFFFFF;
+
+            /* Spacing */
+            --container-width: 1200px;
+            --section-padding: 100px 20px;
+
+            /* Transitions */
+            --transition-speed: 0.3s;
+        }
+
+        [data-theme="light"] {
+            --bg-color: #FFFFFF;
+            --text-primary: #1A1A1A;
+            --text-secondary: #666666;
+            --card-bg: #F5F5F5;
+            --header-bg: rgba(255, 255, 255, 0.95);
+            --nav-link: #1A1A1A;
+            --border-color: rgba(255, 49, 49, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            overflow-x: hidden;
+        }
+
+        /* Subtle concrete texture overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-speed);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            transition: transform var(--transition-speed);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+            gap: 1px;
+        }
+
+        .logo-veles {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.08em;
+            color: var(--text-primary);
+            text-transform: uppercase;
+        }
+
+        .logo-sub {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            color: var(--accent-red);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: var(--nav-link);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-red);
+        }
+
+        .nav-link.active {
+            border-bottom: 2px solid var(--accent-red);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Buttons */
+        .cta-primary {
+            display: inline-block;
+            background: var(--accent-red);
+            color: #FFFFFF;
+            padding: 16px 32px;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .cta-primary:hover {
+            background: var(--accent-hover);
+            box-shadow: 0 8px 24px rgba(255, 49, 49, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--accent-red);
+            padding: 14px 30px;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: 2px solid var(--accent-red);
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 49, 49, 0.1);
+        }
+
+        /* Sections */
+        section {
+            padding: var(--section-padding);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-red);
+            margin: 20px auto 0;
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('https://images.unsplash.com/photo-1504307651254-3b1686fff3a4?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            padding-top: 80px;
+        }
+
+        [data-theme="light"] #hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1504307651254-3b1686fff3a4?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .trust-bar {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .trust-bar span {
+            border-bottom: 1px solid rgba(255, 49, 49, 0.3);
+            padding-bottom: 4px;
+        }
+
+        /* Pillars Section */
+        .grid-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .pillar-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-left: 4px solid var(--accent-red);
+            transition: transform var(--transition-speed);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pillar-card .icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .pillar-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .pillar-card p {
+            color: var(--text-secondary);
+        }
+
+        /* Services Section */
+        .grid-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .service-scope {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent-red);
+            background: rgba(255, 49, 49, 0.1);
+            padding: 4px 8px;
+        }
+
+        /* Realizations Section */
+        .case-studies-list {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .case-study {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            background: var(--card-bg);
+            align-items: stretch;
+            overflow: hidden;
+        }
+
+        .case-study:nth-child(even) {
+            direction: rtl;
+        }
+
+        .case-study:nth-child(even) .case-content {
+            direction: ltr;
+        }
+
+        .case-image {
+            overflow: hidden;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .case-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .case-content {
+            padding: 50px;
+        }
+
+        .case-content h3 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .case-stats {
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .case-stats p {
+            font-size: 0.9rem;
+        }
+
+        .accent-mono {
+            color: var(--accent-red);
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .case-description {
+            font-size: 0.95rem;
+        }
+
+        .case-description p {
+            margin-bottom: 15px;
+        }
+
+        /* Before/After Slider */
+        .before-after-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            overflow: hidden;
+        }
+
+        .before-after-container .img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .foreground-img {
+            width: 50%;
+            overflow: hidden;
+            z-index: 2;
+            border-right: 2px solid #FFFFFF;
+        }
+
+        .before-after-container .slider {
+            position: absolute;
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            outline: none;
+            margin: 0;
+            z-index: 10;
+            cursor: ew-resize;
+        }
+
+        .before-after-container .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 40px;
+            height: 40px;
+            background: var(--accent-red);
+            border: 4px solid #FFFFFF;
+            border-radius: 50%;
+            cursor: ew-resize;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        .slider-label {
+            position: absolute;
+            bottom: 20px;
+            padding: 5px 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            z-index: 3;
+            text-transform: uppercase;
+        }
+
+        .label-before { left: 20px; }
+        .label-after { right: 20px; }
+
+        /* Process Section */
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--border-color);
+            z-index: 1;
+        }
+
+        .step {
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            text-align: center;
+        }
+
+        .step-num {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: var(--bg-color);
+            border: 2px solid var(--accent-red);
+            color: var(--accent-red);
+            line-height: 56px;
+            font-weight: 900;
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 20px;
+            transition: all var(--transition-speed);
+        }
+
+        .step:hover .step-num {
+            background: var(--accent-red);
+            color: #FFFFFF;
+        }
+
+        .step h4 {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            font-weight: 900;
+        }
+
+        .step p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .faq-item h4 {
+            color: var(--accent-red);
+            margin-bottom: 10px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 900;
+        }
+
+        .faq-item p {
+            color: var(--text-secondary);
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .contact-info h2::after {
+            margin: 20px 0 0;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .direct-contact {
+            margin-top: 40px;
+        }
+
+        .direct-contact p {
+            color: var(--accent-red);
+            font-weight: 900;
+            margin-bottom: 5px;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .direct-contact .phone {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--text-primary);
+        }
+
+        .contact-container {
+            background: var(--card-bg);
+            padding: 50px;
+        }
+
+        #contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+        }
+
+        input, select, textarea {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 12px;
+            font-family: 'Inter', sans-serif;
+            transition: border-color var(--transition-speed);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-red);
+        }
+
+        input[type="file"] {
+            border: 1px dashed var(--border-color);
+            padding: 15px;
+            background: rgba(255, 49, 49, 0.02);
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        input[type="file"]::file-selector-button {
+            background: var(--accent-red);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            margin-right: 15px;
+            cursor: pointer;
+            transition: background var(--transition-speed);
+        }
+
+        input[type="file"]::file-selector-button:hover {
+            background: var(--accent-hover);
+        }
+
+        .form-checkbox {
+            grid-column: span 2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+        }
+
+        #contact-form button {
+            grid-column: span 2;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #000000;
+            color: #FFFFFF;
+            padding: 80px 20px 40px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            color: #B0B0B0;
+            font-size: 0.9rem;
+        }
+
+        .footer-links p {
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-size: 0.8rem;
+        }
+
+        .footer-links ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: #B0B0B0;
+            font-size: 0.9rem;
+        }
+
+        .footer-links .link-academy { color: #44C060 !important; }
+        .footer-links .link-digital { color: #0170F5 !important; }
+        .footer-links .link-interiors { color: #FF3131 !important; }
+        .footer-links .link-group {
+            color: #000000 !important;
+            background: #FFFFFF;
+            padding: 0 4px;
+            font-weight: 700;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666666;
+        }
+
+        /* Scroll Reveals */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 1024px) {
+            .hero-content h1 { font-size: 3rem; }
+            .case-study { grid-template-columns: 1fr; }
+            .case-study:nth-child(even) { direction: ltr; }
+            .timeline { flex-direction: column; }
+            .timeline::before { display: none; }
+            .step { text-align: left; display: flex; gap: 20px; align-items: flex-start; }
+            .step-num { flex-shrink: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-btns { flex-direction: column; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .contact-info h2 { font-size: 2.5rem; }
+            #contact-form { grid-template-columns: 1fr; }
+            .form-group.full-width { grid-column: span 1; }
+            .form-checkbox { grid-column: span 1; }
+            #contact-form button { grid-column: span 1; }
+            .footer-content { flex-direction: column; gap: 40px; }
+        }
+
+        /* Language Selector */
+        .lang-selector {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all var(--transition-speed);
+        }
+
+        .lang-btn:hover {
+            border-color: var(--accent-red);
+            color: var(--accent-red);
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            min-width: 140px;
+            display: none;
+            z-index: 1001;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .lang-selector:hover .lang-dropdown {
+            display: block;
+        }
+
+        .lang-option {
+            padding: 10px 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background var(--transition-speed);
+            color: var(--text-primary);
+        }
+
+        .lang-option:hover {
+            background: rgba(255, 49, 49, 0.1);
+            color: var(--accent-red);
+        }
+
+        .lang-option.active {
+            color: var(--accent-red);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body data-theme="dark">
+    <!-- NAVIGATION -->
+    <header>
+        <nav>
+            <a href="#hero" class="logo-wrapper">
+                <img src="assets/veles-construction-logo-alone-bgless.png" alt="" class="logo-icon" id="header-logo-img">
+                <div class="logo-text">
+                    <span class="logo-veles">VELES</span>
+                    <span class="logo-sub">CONSTRUCTION</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active" data-i18n="nav_start">Start</a></li>
+                <li><a href="#dlaczego" class="nav-link" data-i18n="nav_why">Dlaczego My</a></li>
+                <li><a href="#uslugi" class="nav-link" data-i18n="nav_services">Usługi</a></li>
+                <li><a href="#realizacje" class="nav-link" data-i18n="nav_realizations">Realizacje</a></li>
+                <li><a href="#proces" class="nav-link" data-i18n="nav_process">Proces</a></li>
+                <li><a href="#kariera" class="nav-link" data-i18n="nav_career">Kariera</a></li>
+                <li><a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
+            </ul>
+            <div style="display: flex; gap: 20px; align-items: center;">
+                <div class="lang-selector">
+                    <button class="lang-btn" id="lang-btn">
+                        <span id="current-lang">🇵🇱 PL</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <div class="lang-option active" data-lang="pl">🇵🇱 PL</div>
+                        <div class="lang-option" data-lang="en">🇬🇧 EN</div>
+                        <div class="lang-option" data-lang="de">🇩🇪 DE</div>
+                        <div class="lang-option" data-lang="fr">🇫🇷 FR</div>
+                        <div class="lang-option" data-lang="es">🇪🇸 ES</div>
+                        <div class="lang-option" data-lang="ru">🇷🇺 RU</div>
+                        <div class="lang-option" data-lang="ua">🇺🇦 UA</div>
+                    </div>
+                </div>
+                <a href="#kontakt" class="cta-nav" data-i18n="nav_contact" style="font-weight: 700; color: var(--accent-red); font-size: 0.9rem; text-transform: uppercase;">Kontakt</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Przełącz tryb">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECTION 1: HERO -->
+        <section id="hero">
+            <div class="container hero-content">
+                <h1 data-i18n="hero_h1">Budujemy z precyzją.<br>Europejski Standard.<br>Polska Realizacja.</h1>
+                <p data-i18n="hero_p">Generalne wykonawstwo hal przemysłowych, magazynów i instalacji technologicznych. Inżynierska precyzja, bezkompromisowa jakość. Komunikacja: PL · EN · DE · FR · ES · RU · UA</p>
+                <div class="hero-btns">
+                    <a href="#kontakt" class="cta-primary" data-i18n="hero_cta_primary">Rozpocznij projekt</a>
+                    <a href="#realizacje" class="cta-secondary" data-i18n="hero_cta_secondary">Nasze realizacje</a>
+                </div>
+                <div class="trust-bar">
+                    <span data-i18n="trust_1">✓ Realizacje w Niemczech i Norwegii</span>
+                    <span data-i18n="trust_2">✓ 100% terminowości</span>
+                    <span data-i18n="trust_3">✓ Normy Eurokod i DIN</span>
+                    <span data-i18n="trust_4">✓ Full Project Management</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: DLACZEGO VELES INTERIORS -->
+        <section id="dlaczego">
+            <div class="container">
+                <h2 class="section-title" data-i18n="why_title">Dlaczego Veles Construction?</h2>
+                <div class="grid-pillars">
+                    <div class="pillar-card">
+                        <div class="icon">🏗️</div>
+                        <h3 data-i18n="pillar_1_h3">Inżynierska Precyzja</h3>
+                        <p data-i18n="pillar_1_p">Doświadczenie z rynków skandynawskich i niemieckich pozwala nam realizować najbardziej złożone konstrukcje stalowe i żelbetowe zgodnie z Eurokodami.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="icon">⚙️</div>
+                        <h3 data-i18n="pillar_2_h3">Technologia i Instalacje</h3>
+                        <p data-i18n="pillar_2_p">Nie tylko budujemy mury. Projektujemy i wdrażamy zaawansowane instalacje przemysłowe, HVAC oraz automatykę budynkową (BMS).</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="icon">📋</div>
+                        <h3 data-i18n="pillar_3_h3">Generalne Wykonawstwo</h3>
+                        <p data-i18n="pillar_3_p">Przejmujemy pełną odpowiedzialność za proces budowlany. Od pozwolenia na budowę, przez montaż konstrukcji, aż po odbiory końcowe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: ZAKRES USŁUG -->
+        <section id="uslugi">
+            <div class="container">
+                <h2 class="section-title" data-i18n="services_title">Zakres Usług</h2>
+                <div class="grid-services">
+                    <div class="service-card">
+                        <h3 data-i18n="service_1_h3">Hale Stalowe i Magazyny</h3>
+                        <p data-i18n="service_1_p">Projektowanie i montaż konstrukcji stalowych. Kompleksowa budowa obiektów wielkopowierzchniowych, centrów logistycznych i produkcyjnych.</p>
+                        <span class="service-scope" data-i18n="service_1_scope">Optymalizacja konstrukcji</span>
+                    </div>
+                    <div class="service-card">
+                        <h3 data-i18n="service_2_h3">Instalacje Przemysłowe</h3>
+                        <p data-i18n="service_2_p">Wykonawstwo zaawansowanych systemów HVAC, instalacji elektrycznych wysokiej mocy, sieci sanitarnych oraz systemów ppoż.</p>
+                        <span class="service-scope" data-i18n="service_2_scope">HVAC / EL / SAN / BMS</span>
+                    </div>
+                    <div class="service-card">
+                        <h3 data-i18n="service_3_h3">Generalne Wykonawstwo</h3>
+                        <p data-i18n="service_3_p">Kompleksowa realizacja inwestycji w systemie „Zaprojektuj i Buduj”. Pełne doradztwo techniczne i optymalizacja kosztów inwestycji.</p>
+                        <span class="service-scope" data-i18n="service_3_scope">Pełna koordynacja</span>
+                    </div>
+                    <div class="service-card">
+                        <h3 data-i18n="service_4_h3">Project Management</h3>
+                        <p data-i18n="service_4_p">Profesjonalne zarządzanie budową, nadzór inwestorski oraz controlling kosztowy i terminowy przy użyciu nowoczesnych narzędzi IT.</p>
+                        <span class="service-scope" data-i18n="service_4_scope">Standardy międzynarodowe</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: REALIZACJE -->
+        <section id="realizacje">
+            <div class="container">
+                <h2 class="section-title" data-i18n="cases_title">Case Studies</h2>
+                <div class="case-studies-list">
+                    <!-- Case Study 1: Slider Before/After -->
+                    <div class="case-study reveal">
+                        <div class="case-image">
+                            <div class="before-after-container" id="ba-slider-1">
+                                <div class="img background-img">
+                                    <img data-src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200" alt="Site preparation" loading="lazy">
+                                    <span class="slider-label label-before" data-i18n="label_before">Przygotowanie</span>
+                                </div>
+                                <div class="img foreground-img">
+                                    <img data-src="https://images.unsplash.com/photo-1565034946487-067915993741?auto=format&fit=crop&q=80&w=1200" alt="Finished hall" loading="lazy">
+                                    <span class="slider-label label-after" data-i18n="label_after">Realizacja</span>
+                                </div>
+                                <input type="range" min="1" max="100" value="50" class="slider" name="slider" id="slider-1">
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <span class="accent-mono" data-i18n="case_1_accent">Centrum Logistyczne / Poznań</span>
+                            <h3 data-i18n="case_1_h3">Hala Magazynowa Klasy A</h3>
+                            <div class="case-stats">
+                                <div>
+                                    <span class="accent-mono" data-i18n="case_1_stat_1_label">Powierzchnia</span>
+                                    <p data-i18n="case_1_stat_1_val">12 500 m²</p>
+                                </div>
+                                <div>
+                                    <span class="accent-mono" data-i18n="case_1_stat_2_label">Czas Budowy</span>
+                                    <p data-i18n="case_1_stat_2_val">6 Miesięcy</p>
+                                </div>
+                            </div>
+                            <div class="case-description">
+                                <p><strong data-i18n="case_1_challenge_label">Wyzwanie:</strong> <span data-i18n="case_1_challenge_p">Krótki termin realizacji przy trudnych warunkach gruntowych i konieczności palowania.</span></p>
+                                <p><strong data-i18n="case_1_solution_label">Rozwiązanie:</strong> <span data-i18n="case_1_solution_p">Zastosowanie prefabrykowanych elementów żelbetowych i optymalizacja konstrukcji stalowej dachu.</span></p>
+                                <p><strong data-i18n="case_1_result_label">Rezultat:</strong> <span data-i18n="case_1_result_p">Obiekt oddany w standardzie BREEAM Very Good, 2 tygodnie przed terminem.</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2 -->
+                    <div class="case-study reveal">
+                        <div class="case-image">
+                            <img data-src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=1200" alt="Hala Produkcyjna" loading="lazy">
+                        </div>
+                        <div class="case-content">
+                            <span class="accent-mono" data-i18n="case_2_accent">Zakład Produkcyjny / Wrocław</span>
+                            <h3 data-i18n="case_2_h3">Infrastruktura Przemysłowa</h3>
+                            <div class="case-stats">
+                                <div>
+                                    <span class="accent-mono" data-i18n="case_2_stat_1_label">Moc przyłącza</span>
+                                    <p data-i18n="case_2_stat_1_val">4.5 MW</p>
+                                </div>
+                                <div>
+                                    <span class="accent-mono" data-i18n="case_2_stat_2_label">Standard</span>
+                                    <p data-i18n="case_2_stat_2_val">ISO 9001 / DIN</p>
+                                </div>
+                            </div>
+                            <div class="case-description">
+                                <p><strong data-i18n="case_2_challenge_label">Wyzwanie:</strong> <span data-i18n="case_2_challenge_p">Montaż skomplikowanych instalacji procesowych i technologicznych w działającym zakładzie.</span></p>
+                                <p><strong data-i18n="case_2_solution_label">Rozwiązanie:</strong> <span data-i18n="case_2_solution_p">Precyzyjne planowanie etapowe (BIM) i praca w systemie zmianowym bez przestojów produkcji.</span></p>
+                                <p><strong data-i18n="case_2_result_label">Rezultat:</strong> <span data-i18n="case_2_result_p">Pełna integracja systemów HVAC i automatyki przemysłowej w 90 dni.</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 3 -->
+                    <div class="case-study reveal">
+                        <div class="case-image">
+                            <img data-src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80&w=1200" alt="Magazyn Wysokiego Składowania" loading="lazy">
+                        </div>
+                        <div class="case-content">
+                            <span class="accent-mono" data-i18n="case_3_accent">Magazyn Energii / Gdańsk</span>
+                            <h3 data-i18n="case_3_h3">Budownictwo Przemysłowe</h3>
+                            <div class="case-stats">
+                                <div>
+                                    <span class="accent-mono" data-i18n="case_3_stat_1_label">Wysokość składowania</span>
+                                    <p data-i18n="case_3_stat_1_val">18 m</p>
+                                </div>
+                                <div>
+                                    <span class="accent-mono" data-i18n="case_3_stat_2_label">Posadzka</span>
+                                    <p data-i18n="case_3_stat_2_val">Bezspoinowa FM1</p>
+                                </div>
+                            </div>
+                            <div class="case-description">
+                                <p><strong data-i18n="case_3_challenge_label">Wyzwanie:</strong> <span data-i18n="case_3_challenge_p">Ekstremalnie rygorystyczne normy płaskości posadzki pod wózki VNA.</span></p>
+                                <p><strong data-i18n="case_3_solution_label">Rozwiązanie:</strong> <span data-i18n="case_3_solution_p">Wykorzystanie laserowego niwelowania i specjalistycznych mieszanek betonowych.</span></p>
+                                <p><strong data-i18n="case_3_result_label">Rezultat:</strong> <span data-i18n="case_3_result_p">Najwyższa klasa płaskości posadzki potwierdzona certyfikatem niezależnego audytora.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: PROCES WSPÓŁPRACY -->
+        <section id="proces">
+            <div class="container">
+                <h2 class="section-title" data-i18n="process_title">Proces Inwestycyjny</h2>
+                <div class="timeline">
+                    <div class="step">
+                        <span class="step-num">01</span>
+                        <div>
+                            <h4 data-i18n="step_1_h4">Analiza i Koncepcja</h4>
+                            <p data-i18n="step_1_p">Analizujemy potrzeby operacyjne, warunki zabudowy i dobieramy optymalne rozwiązania konstrukcyjne.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">02</span>
+                        <div>
+                            <h4 data-i18n="step_2_h4">Projektowanie BIM</h4>
+                            <p data-i18n="step_2_p">Tworzymy cyfrowy model obiektu (BIM), co pozwala wyeliminować kolizje i precyzyjnie zaplanować koszty.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">03</span>
+                        <div>
+                            <h4 data-i18n="step_3_h4">Pozwolenia i Formalności</h4>
+                            <p data-i18n="step_3_p">Kompletujemy dokumentację i uzyskujemy niezbędne pozwolenia administracyjne oraz techniczne.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">04</span>
+                        <div>
+                            <h4 data-i18n="step_4_h4">Budowa i Montaż</h4>
+                            <p data-i18n="step_4_p">Realizujemy prace ziemne, montaż konstrukcji i instalacji pod ścisłym nadzorem inżynierskim.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">05</span>
+                        <div>
+                            <h4 data-i18n="step_5_h4">Uruchomienie i Odbiór</h4>
+                            <p data-i18n="step_5_p">Przeprowadzamy testy systemów, szkolenia personelu i przekazujemy obiekt do użytkowania.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: FAQ -->
+        <section id="faq">
+            <div class="container">
+                <h2 class="section-title" data-i18n="faq_title">FAQ</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4 data-i18n="faq_1_q">Jaki jest czas budowy typowej hali?</h4>
+                        <p data-i18n="faq_1_a">Standardowa hala o powierzchni 1000-2000 m² powstaje w czasie 4-6 miesięcy, w zależności od stopnia skomplikowania instalacji.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 data-i18n="faq_2_q">Czy pomagacie w uzyskaniu pozwolenia na budowę?</h4>
+                        <p data-i18n="faq_2_a">Tak, w ramach Generalnego Wykonawstwa bierzemy na siebie pełny proces administracyjny i prawny.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 data-i18n="faq_3_q">Czy budujecie według norm Eurokod?</h4>
+                        <p data-i18n="faq_3_a">Wszystkie nasze projekty i realizacje są ściśle zgodne z europejskimi normami projektowania konstrukcji (Eurokody).</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 data-i18n="faq_4_q">Jakie instalacje przemysłowe wykonujecie?</h4>
+                        <p data-i18n="faq_4_a">Zajmujemy się pełnym spektrum: HVAC, stacje trafo, sprężone powietrze, instalacje tryskaczowe oraz automatyka procesowa.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 data-i18n="faq_5_q">Czy oferujecie serwis pogwarancyjny?</h4>
+                        <p data-i18n="faq_5_a">Zapewniamy pełną opiekę serwisową 24/7 dla kluczowych systemów instalacyjnych oraz przeglądy okresowe konstrukcji.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- SECTION 7: KONTAKT -->
+        <section id="kontakt">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 class="section-title" data-i18n="contact_h2">Gotowy na nowy standard?</h2>
+                        <p data-i18n="contact_p">Oddzwonimy w ciągu 24h roboczych, aby omówić szczegóły Twojego projektu.</p>
+                        <div class="direct-contact">
+                            <p data-i18n="contact_direct_p">Bezpośredni kontakt:</p>
+                            <span class="phone">+48 XXX XXX XXX</span>
+                        </div>
+                    </div>
+                    <div class="contact-container">
+                        <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-i18n="form_name_label">Imię i nazwisko / Firma</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="form_email_label">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-i18n="form_phone_label">Telefon</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+48 ...">
+                        </div>
+                        <div class="form-group">
+                            <label for="location" data-i18n="form_location_label">Lokalizacja projektu</label>
+                            <input type="text" id="location" name="location" placeholder="np. Warszawa" data-i18n="form_placeholder_location">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="budget" data-i18n="form_budget_label">Orientacyjny budżet</label>
+                            <select id="budget" name="budget">
+                                <option value="<1M">&lt; 1,000,000 PLN</option>
+                                <option value="1-5M">1,000,000 - 5,000,000 PLN</option>
+                                <option value="5-10M">5,000,000 - 10,000,000 PLN</option>
+                                <option value="10M+">10,000,000 PLN +</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message" data-i18n="form_message_label">Opis projektu</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Krótko opisz zakres prac i Twoje oczekiwania..." data-i18n="form_placeholder_message"></textarea>
+                        </div>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy" data-i18n="form_privacy_label">Akceptuję politykę prywatności i kontakt w celu przygotowania oferty.</label>
+                        </div>
+                            <button type="submit" class="cta-primary" data-i18n="form_submit">Wyślij zapytanie</button>
+                        </form>
+                        <div id="form-response" style="display: none; margin-top: 20px; text-align: center; font-weight: 700; color: var(--accent-red);" data-i18n="form_success">
+                            Dziękujemy! Twoja wiadomość została wysłana. Odpowiemy w ciągu 24h.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: KARIERA -->
+        <section id="kariera">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 class="section-title" data-i18n="career_h2">Dołącz do zespołu</h2>
+                        <p data-i18n="career_p">Szukamy specjalistów, dla których jakość to nie pusty slogan. Jeśli pracujesz w standardzie DIN i chcesz realizować projekty premium – czekamy na Ciebie.</p>
+                        <div class="direct-contact">
+                            <p data-i18n="career_benefits_p" style="margin-bottom: 15px;">Co oferujemy:</p>
+                            <ul style="list-style: disc; margin-left: 20px; color: var(--text-secondary); font-size: 1rem; display: flex; flex-direction: column; gap: 10px;">
+                                <li data-i18n="career_benefit_1">Atrakcyjne stawki i terminowe płatności</li>
+                                <li data-i18n="career_benefit_2">Praca przy najbardziej prestiżowych projektach</li>
+                                <li data-i18n="career_benefit_3">Profesjonalny sprzęt i narzędzia renomowanych marek</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contact-container">
+                        <form id="career-form">
+                            <div class="form-group">
+                                <label for="career-name" data-i18n="form_name_label">Imię i nazwisko</label>
+                                <input type="text" id="career-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="career-email" data-i18n="form_email_label">Email</label>
+                                <input type="email" id="career-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="career-phone" data-i18n="form_phone_label">Telefon</label>
+                                <input type="tel" id="career-phone" name="phone" placeholder="+48 ...">
+                            </div>
+                            <div class="form-group">
+                                <label for="career-position" data-i18n="career_position_label">Stanowisko</label>
+                                <select id="career-position" name="position">
+                                    <option value="site_manager" data-i18n="career_pos_1">Kierownik Budowy</option>
+                                    <option value="engineer" data-i18n="career_pos_2">Inżynier Budowy / Instalacji</option>
+                                    <option value="fitter" data-i18n="career_pos_3">Monter Konstrukcji / Instalator</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="career-cv" data-i18n="career_cv_label">CV / Portfolio (PDF, DOCX, TXT)</label>
+                                <input type="file" id="career-cv" name="cv" accept=".pdf,.docx,.doc,.txt,.jpg,.png" style="padding: 10px 0;">
+                                <small style="font-size: 0.7rem; color: var(--text-secondary);" data-i18n="career_file_hint">Maksymalny rozmiar: 5MB</small>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="career-message" data-i18n="career_message_label">Kilka słów o Tobie</label>
+                                <textarea id="career-message" name="message" rows="4" placeholder="..." data-i18n="form_placeholder_career_message"></textarea>
+                            </div>
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="career-privacy" name="privacy" required>
+                                <label for="career-privacy" data-i18n="career_privacy_label">Wyrażam zgodę na przetwarzanie danych w celach rekrutacyjnych.</label>
+                            </div>
+                            <button type="submit" class="cta-primary" data-i18n="career_submit">Aplikuj teraz</button>
+                        </form>
+                        <div id="career-response" style="display: none; margin-top: 20px; text-align: center; font-weight: 700; color: var(--accent-red);" data-i18n="career_success">
+                            Dziękujemy! Twoja aplikacja została wysłana. Odpowiemy w ciągu 2-3 dni.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#hero" class="logo-wrapper">
+                    <img src="assets/veles-construction-logo-alone-bgless.png" alt="" class="logo-icon" id="footer-logo-img">
+                    <div class="logo-text">
+                        <span class="logo-veles">VELES</span>
+                        <span class="logo-sub">CONSTRUCTION</span>
+                    </div>
+                </a>
+                <p data-i18n="footer_brand_p">Budowa hal i instalacje przemysłowe.<br>Europejski standard, polska realizacja.</p>
+            </div>
+            <div class="footer-links">
+                <p><a href="https://velessyndicate.pl" data-i18n="footer_syndicate_link">Veles Syndicate</a></p>
+                <ul>
+                    <li><a href="https://velesacademy.app" class="link-academy" data-i18n="footer_academy_link">Veles Academy — Szkolenia dla Project Managerów</a></li>
+                    <li><a href="https://velesdigital.pl" class="link-digital" data-i18n="footer_digital_link">Veles Digital — Strony i produkty cyfrowe</a></li>
+                <li><a href="https://velesconstruction.pl" class="link-interiors" data-i18n="footer_interiors_link">Veles Construction — Hale i konstrukcje</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <p data-i18n="footer_nav_label">Nawigacja</p>
+                <ul>
+                    <li><a href="#hero" data-i18n="nav_start">Start</a></li>
+                    <li><a href="#dlaczego" data-i18n="nav_why">O nas</a></li>
+                    <li><a href="#uslugi" data-i18n="nav_services">Usługi</a></li>
+                    <li><a href="#realizacje" data-i18n="nav_realizations">Realizacje</a></li>
+                    <li><a href="#kariera" data-i18n="nav_career">Kariera</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer_rights">&copy; 2024 Veles Construction. Część Veles Syndicate. Wszystkie prawa zastrzeżone.</p>
+            <p><span data-i18n="footer_made_by">made by</span> <a href="https://velesdigital.co" class="link-digital" style="color: #0170F5 !important">Veles Digital</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            "pl": {
+                "page_title": "Veles Construction | Hale Przemysłowe i Generalne Wykonawstwo",
+                "meta_description": "Veles Construction - specjalista w budowie hal przemysłowych, magazynowych oraz instalacjach technologicznych. Europejski standard, polska realizacja.",
+                "nav_start": "Start",
+                "nav_why": "O nas",
+                "nav_services": "Usługi",
+                "nav_realizations": "Realizacje",
+                "nav_process": "Proces",
+                "nav_career": "Kariera",
+                "nav_faq": "FAQ",
+                "nav_contact": "Kontakt",
+                "hero_h1": "Budujemy z precyzją.<br>Europejski Standard.<br>Polska Realizacja.",
+                "hero_p": "Generalne wykonawstwo hal przemysłowych, magazynów i instalacji technologicznych. Inżynierska precyzja, bezkompromisowa jakość. Komunikacja: PL · EN · DE · FR · RU · UA",
+                "hero_cta_primary": "Rozpocznij projekt",
+                "hero_cta_secondary": "Nasze realizacje",
+                "trust_1": "✓ Realizacje w Niemczech i Norwegii",
+                "trust_2": "✓ 100% terminowości",
+                "trust_3": "✓ Normy Eurokod i DIN",
+                "trust_4": "✓ Full Project Management",
+                "why_title": "Dlaczego Veles Construction?",
+                "pillar_1_h3": "Inżynierska Precyzja",
+                "pillar_1_p": "Doświadczenie z rynków skandynawskich i niemieckich pozwala nam realizować najbardziej złożone konstrukcje stalowe i żelbetowe zgodnie z Eurokodami.",
+                "pillar_2_h3": "Technologia i Instalacje",
+                "pillar_2_p": "Nie tylko budujemy mury. Projektujemy i wdrażamy zaawansowane instalacje przemysłowe, HVAC oraz automatykę budynkową (BMS).",
+                "pillar_3_h3": "Generalne Wykonawstwo",
+                "pillar_3_p": "Przejmujemy pełną odpowiedzialność za proces budowlany. Od pozwolenia na budowę, przez montaż konstrukcji, aż po odbiory końcowe.",
+                "services_title": "Zakres Usług",
+                "service_1_h3": "Hale Stalowe i Magazyny",
+                "service_1_p": "Projektowanie i montaż konstrukcji stalowych. Kompleksowa budowa obiektów wielkopowierzchniowych, centrów logistycznych i produkcyjnych.",
+                "service_1_scope": "Optymalizacja konstrukcji",
+                "service_2_h3": "Instalacje Przemysłowe",
+                "service_2_p": "Wykonawstwo zaawansowanych systemów HVAC, instalacji elektrycznych wysokiej mocy, sieci sanitarnych oraz systemów ppoż.",
+                "service_2_scope": "HVAC / EL / SAN / BMS",
+                "service_3_h3": "Generalne Wykonawstwo",
+                "service_3_p": "Kompleksowa realizacja inwestycji w systemie „Zaprojektuj i Buduj”. Pełne doradztwo techniczne i optymalizacja kosztów inwestycji.",
+                "service_3_scope": "Pełna koordynacja",
+                "service_4_h3": "Project Management",
+                "service_4_p": "Profesjonalne zarządzanie budową, nadzór inwestorski oraz controlling kosztowy i terminowy przy użyciu nowoczesnych narzędzi IT.",
+                "service_4_scope": "Standardy międzynarodowe",
+                "cases_title": "Case Studies",
+                "case_1_accent": "Centrum Logistyczne / Poznań",
+                "case_1_h3": "Hala Magazynowa Klasy A",
+                "case_1_stat_1_label": "Powierzchnia",
+                "case_1_stat_1_val": "12 500 m²",
+                "case_1_stat_2_label": "Czas Budowy",
+                "case_1_stat_2_val": "6 Miesięcy",
+                "case_1_challenge_label": "Wyzwanie:",
+                "case_1_challenge_p": "Krótki termin realizacji przy trudnych warunkach gruntowych i konieczności palowania.",
+                "case_1_solution_label": "Rozwiązanie:",
+                "case_1_solution_p": "Zastosowanie prefabrykowanych elementów żelbetowych i optymalizacja konstrukcji stalowej dachu.",
+                "case_1_result_label": "Rezultat:",
+                "case_1_result_p": "Obiekt oddany w standardzie BREEAM Very Good, 2 tygodnie przed terminem.",
+                "label_before": "Przygotowanie",
+                "label_after": "Realizacja",
+                "case_2_accent": "Zakład Produkcyjny / Wrocław",
+                "case_2_h3": "Infrastruktura Przemysłowa",
+                "case_2_stat_1_label": "Moc przyłącza",
+                "case_2_stat_1_val": "4.5 MW",
+                "case_2_stat_2_label": "Standard",
+                "case_2_stat_2_val": "ISO 9001 / DIN",
+                "case_2_challenge_label": "Wyzwanie:",
+                "case_2_challenge_p": "Montaż skomplikowanych instalacji procesowych i technologicznych w działającym zakładzie.",
+                "case_2_solution_label": "Rozwiązanie:",
+                "case_2_solution_p": "Precyzyjne planowanie etapowe (BIM) i praca w systemie zmianowym bez przestojów produkcji.",
+                "case_2_result_label": "Rezultat:",
+                "case_2_result_p": "Pełna integracja systemów HVAC i automatyki przemysłowej w 90 dni.",
+                "case_3_accent": "Magazyn Energii / Gdańsk",
+                "case_3_h3": "Budownictwo Przemysłowe",
+                "case_3_stat_1_label": "Wysokość składowania",
+                "case_3_stat_1_val": "18 m",
+                "case_3_stat_2_label": "Posadzka",
+                "case_3_stat_2_val": "Bezspoinowa FM1",
+                "case_3_challenge_label": "Wyzwanie:",
+                "case_3_challenge_p": "Ekstremalnie rygorystyczne normy płaskości posadzki pod wózki VNA.",
+                "case_3_solution_label": "Rozwiązanie:",
+                "case_3_solution_p": "Wykorzystanie laserowego niwelowania i specjalistycznych mieszanek betonowych.",
+                "case_3_result_label": "Rezultat:",
+                "case_3_result_p": "Najwyższa klasa płaskości posadzki potwierdzona certyfikatem niezależnego audytora.",
+                "process_title": "Proces Inwestycyjny",
+                "step_1_h4": "Analiza i Koncepcja",
+                "step_1_p": "Analizujemy potrzeby operacyjne, warunki zabudowy i dobieramy optymalne rozwiązania konstrukcyjne.",
+                "step_2_h4": "Projektowanie BIM",
+                "step_2_p": "Tworzymy cyfrowy model obiektu (BIM), co pozwala wyeliminować kolizje i precyzyjnie zaplanować koszty.",
+                "step_3_h4": "Pozwolenia i Formalności",
+                "step_3_p": "Kompletujemy dokumentację i uzyskujemy niezbędne pozwolenia administracyjne oraz techniczne.",
+                "step_4_h4": "Budowa i Montaż",
+                "step_4_p": "Realizujemy prace ziemne, montaż konstrukcji i instalacji pod ścisłym nadzorem inżynierskim.",
+                "step_5_h4": "Uruchomienie i Odbiór",
+                "step_5_p": "Przeprowadzamy testy systemów, szkolenia personelu i przekazujemy obiekt do użytkowania.",
+                "faq_title": "FAQ",
+                "faq_1_q": "Jaki jest czas budowy typowej hali?",
+                "faq_1_a": "Standardowa hala o powierzchni 1000-2000 m² powstaje w czasie 4-6 miesięcy, w zależności od stopnia skomplikowania instalacji.",
+                "faq_2_q": "Czy pomagacie w uzyskaniu pozwolenia na budowę?",
+                "faq_2_a": "Tak, w ramach Generalnego Wykonawstwa bierzemy na siebie pełny proces administracyjny i prawny.",
+                "faq_3_q": "Czy budujecie według norm Eurokod?",
+                "faq_3_a": "Wszystkie nasze projekty i realizacje są ściśle zgodne z europejskimi normami projektowania konstrukcji (Eurokody).",
+                "faq_4_q": "Jakie instalacje przemysłowe wykonujecie?",
+                "faq_4_a": "Zajmujemy się pełnym spektrum: HVAC, stacje trafo, sprężone powietrze, instalacje tryskaczowe oraz automatyka procesowa.",
+                "faq_5_q": "Czy oferujecie serwis pogwarancyjny?",
+                "faq_5_a": "Zapewniamy pełną opiekę serwisową 24/7 dla kluczowych systemów instalacyjnych oraz przeglądy okresowe konstrukcji.",
+                "contact_h2": "Gotowy na nowy standard?",
+                "contact_p": "Nasi inżynierowie oddzwonią w ciągu 24h, aby przeanalizować Twoje zapytanie.",
+                "contact_direct_p": "Dział Techniczny:",
+                "form_name_label": "Imię i nazwisko / Firma",
+                "form_email_label": "Email służbowy",
+                "form_phone_label": "Telefon",
+                "form_location_label": "Lokalizacja inwestycji",
+                "form_budget_label": "Przewidywany budżet",
+                "form_message_label": "Zakres prac / Specyfikacja",
+                "form_privacy_label": "Akceptuję politykę prywatności i kontakt techniczny.",
+                "form_submit": "Wyślij zapytanie ofertowe",
+                "form_placeholder_location": "np. Warszawa / Berlin",
+                "form_placeholder_message": "Opisz krótko parametry hali lub zakres instalacji...",
+                "form_success": "Dziękujemy. Zapytanie zostało przekazane do działu ofertowania.",
+                "footer_brand_p": "Budowa hal i instalacje przemysłowe.<br>Europejski standard, polska realizacja.",
+                "footer_syndicate_link": "Veles Syndicate",
+                "footer_academy_link": "Veles Academy — Szkolenia dla Inżynierów",
+                "footer_digital_link": "Veles Digital — BIM i produkty cyfrowe",
+                "footer_interiors_link": "Veles Construction — Hale i konstrukcje",
+                "footer_nav_label": "Nawigacja",
+                "footer_rights": "© 2024 Veles Construction. Część Veles Syndicate. Wszystkie prawa zastrzeżone.",
+                "footer_made_by": "made by",
+                "career_h2": "Dołącz do Veles Team",
+                "career_p": "Szukamy inżynierów i specjalistów, dla których precyzja to fundament. Budujemy zespół oparty na wiedzy technicznej i standardach europejskich.",
+                "career_benefits_p": "Gwarantujemy:",
+                "career_benefit_1": "Udział w unikalnych projektach przemysłowych",
+                "career_benefit_2": "Praca w metodologii BIM i nowoczesne narzędzia",
+                "career_benefit_3": "Jasna ścieżka rozwoju inżynierskiego",
+                "career_position_label": "Stanowisko",
+                "career_pos_1": "Kierownik Budowy",
+                "career_pos_2": "Inżynier Budowy / Instalacji",
+                "career_pos_3": "Monter Konstrukcji / Instalator",
+                "career_cv_label": "CV / Uprawnienia (PDF)",
+                "career_file_hint": "Maksymalny rozmiar: 5MB",
+                "career_message_label": "Doświadczenie i kompetencje",
+                "form_placeholder_career_message": "Krótko opisz swoje doświadczenie w branży budowlanej...",
+                "career_privacy_label": "Wyrażam zgodę na przetwarzanie danych w celach rekrutacyjnych.",
+                "career_submit": "Aplikuj",
+                "career_success": "Twoja aplikacja została zarejestrowana w systemie HR."
+            },
+            "en": {
+                "page_title": "Veles Construction | Industrial Halls & General Contracting",
+                "meta_description": "Veles Construction - specialist in industrial & warehouse construction and technological installations. European standards, Polish execution.",
+                "nav_start": "Home",
+                "nav_why": "About Us",
+                "nav_services": "Services",
+                "nav_realizations": "Portfolio",
+                "nav_process": "Process",
+                "nav_career": "Careers",
+                "nav_faq": "FAQ",
+                "nav_contact": "Contact",
+                "hero_h1": "Building with Precision.<br>European Standards.<br>Polish Execution.",
+                "hero_p": "General contracting for industrial halls, warehouses, and technological installations. Engineering precision, uncompromising quality. Languages: PL · EN · DE · FR · RU · UA",
+                "hero_cta_primary": "Start Project",
+                "hero_cta_secondary": "Our Portfolio",
+                "trust_1": "✓ Projects in Germany & Norway",
+                "trust_2": "✓ 100% On-Time Delivery",
+                "trust_3": "✓ Eurocode & DIN Norms",
+                "trust_4": "✓ Full Project Management",
+                "why_title": "Why Veles Construction?",
+                "pillar_1_h3": "Engineering Precision",
+                "pillar_1_p": "Experience from Scandinavian and German markets allows us to execute the most complex steel and concrete structures according to Eurocodes.",
+                "pillar_2_h3": "Technology & Installations",
+                "pillar_2_p": "We don't just build walls. We design and implement advanced industrial installations, HVAC, and building automation (BMS).",
+                "pillar_3_h3": "General Contracting",
+                "pillar_3_p": "We take full responsibility for the construction process. From building permits to structure assembly and final inspections.",
+                "services_title": "Our Scope of Services",
+                "service_1_h3": "Steel Halls & Warehouses",
+                "service_1_p": "Design and assembly of steel structures. Comprehensive construction of large-scale facilities, logistics, and production centers.",
+                "service_1_scope": "Structure Optimization",
+                "service_2_h3": "Industrial Installations",
+                "service_2_p": "Execution of advanced HVAC systems, high-power electrical installations, sanitary networks, and fire protection systems.",
+                "service_2_scope": "HVAC / EL / SAN / BMS",
+                "service_3_h3": "General Contracting",
+                "service_3_p": "Comprehensive investment implementation in the 'Design & Build' system. Full technical consultancy and investment cost optimization.",
+                "service_3_scope": "Full Coordination",
+                "service_4_h3": "Project Management",
+                "service_4_p": "Professional construction management, investor supervision, and cost/schedule controlling using modern IT tools.",
+                "service_4_scope": "International Standards",
+                "cases_title": "Case Studies",
+                "case_1_accent": "Logistics Center / Poznań",
+                "case_1_h3": "Class A Warehouse Hall",
+                "case_1_stat_1_label": "Area",
+                "case_1_stat_1_val": "12,500 m²",
+                "case_1_stat_2_label": "Construction Time",
+                "case_1_stat_2_val": "6 Months",
+                "case_1_challenge_label": "Challenge:",
+                "case_1_challenge_p": "Tight deadline with difficult soil conditions requiring piling.",
+                "case_1_solution_label": "Solution:",
+                "case_1_solution_p": "Use of prefabricated reinforced concrete elements and optimization of the steel roof structure.",
+                "case_1_result_label": "Result:",
+                "case_1_result_p": "Facility delivered to BREEAM Very Good standard, 2 weeks ahead of schedule.",
+                "label_before": "Preparation",
+                "label_after": "Execution",
+                "case_2_accent": "Production Plant / Wrocław",
+                "case_2_h3": "Industrial Infrastructure",
+                "case_2_stat_1_label": "Power Connection",
+                "case_2_stat_1_val": "4.5 MW",
+                "case_2_stat_2_label": "Standard",
+                "case_2_stat_2_val": "ISO 9001 / DIN",
+                "case_2_challenge_label": "Challenge:",
+                "case_2_challenge_p": "Installation of complex process and technological systems in an operating plant.",
+                "case_2_solution_label": "Solution:",
+                "case_2_solution_p": "Precise staged planning (BIM) and shift work without production downtime.",
+                "case_2_result_label": "Result:",
+                "case_2_result_p": "Full integration of HVAC and industrial automation systems in 90 days.",
+                "case_3_accent": "Energy Storage / Gdańsk",
+                "case_3_h3": "Industrial Construction",
+                "case_3_stat_1_label": "Storage Height",
+                "case_3_stat_1_val": "18 m",
+                "case_3_stat_2_label": "Flooring",
+                "case_3_stat_2_val": "Seamless FM1",
+                "case_3_challenge_label": "Challenge:",
+                "case_3_challenge_p": "Extremely rigorous floor flatness standards for VNA trucks.",
+                "case_3_solution_label": "Solution:",
+                "case_3_solution_p": "Use of laser leveling and specialized concrete mixes.",
+                "case_3_result_label": "Result:",
+                "case_3_result_p": "Highest floor flatness class confirmed by an independent auditor's certificate.",
+                "process_title": "Investment Process",
+                "step_1_h4": "Analysis & Concept",
+                "step_1_p": "We analyze operational needs, building conditions and select optimal structural solutions.",
+                "step_2_h4": "BIM Design",
+                "step_2_p": "We create a digital building information model (BIM) to eliminate clashes and precisely plan costs.",
+                "step_3_h4": "Permits & Formalities",
+                "step_3_p": "We complete the documentation and obtain the necessary administrative and technical permits.",
+                "step_4_h4": "Construction & Assembly",
+                "step_4_p": "We perform earthworks, structure assembly, and installation under strict engineering supervision.",
+                "step_5_h4": "Commissioning & Handover",
+                "step_5_p": "We conduct system tests, personnel training, and hand over the facility for use.",
+                "faq_title": "FAQ",
+                "faq_1_q": "What is the construction time for a typical hall?",
+                "faq_1_a": "A standard hall of 1000-2000 m² is built within 4-6 months, depending on the complexity of the installations.",
+                "faq_2_q": "Do you help in obtaining a building permit?",
+                "faq_2_a": "Yes, as part of General Contracting, we take on the full administrative and legal process.",
+                "faq_3_q": "Do you build according to Eurocode standards?",
+                "faq_3_a": "All our designs and executions are strictly compliant with European structural design standards (Eurocodes).",
+                "faq_4_q": "What industrial installations do you perform?",
+                "faq_4_a": "We cover the full spectrum: HVAC, transformer stations, compressed air, sprinkler systems, and process automation.",
+                "faq_5_q": "Do you offer post-warranty service?",
+                "faq_5_a": "We provide full 24/7 service care for key installation systems and periodic structural inspections.",
+                "contact_h2": "Ready for a New Standard?",
+                "contact_p": "Our engineers will call you back within 24 hours to analyze your inquiry.",
+                "contact_direct_p": "Technical Dept:",
+                "form_name_label": "Name / Company",
+                "form_email_label": "Business Email",
+                "form_phone_label": "Phone",
+                "form_location_label": "Investment Location",
+                "form_budget_label": "Estimated Budget",
+                "form_message_label": "Scope of Work / Specs",
+                "form_privacy_label": "I accept the privacy policy and technical contact.",
+                "form_submit": "Send Inquiry",
+                "form_placeholder_location": "e.g. Warsaw / Berlin",
+                "form_placeholder_message": "Briefly describe the hall parameters or installation scope...",
+                "form_success": "Thank you. The inquiry has been forwarded to the estimating department.",
+                "footer_brand_p": "Hall construction and industrial installations.<br>European standards, Polish execution.",
+                "footer_syndicate_link": "Veles Syndicate",
+                "footer_academy_link": "Veles Academy — Training for Engineers",
+                "footer_digital_link": "Veles Digital — BIM and digital products",
+                "footer_interiors_link": "Veles Construction — Halls and structures",
+                "footer_nav_label": "Navigation",
+                "footer_rights": "© 2024 Veles Construction. Part of Veles Syndicate. All rights reserved.",
+                "footer_made_by": "made by",
+                "career_h2": "Join Veles Team",
+                "career_p": "We are looking for engineers and specialists for whom precision is the foundation. We build a team based on technical knowledge and European standards.",
+                "career_benefits_p": "We guarantee:",
+                "career_benefit_1": "Participation in unique industrial projects",
+                "career_benefit_2": "Work in BIM methodology and modern tools",
+                "career_benefit_3": "Clear engineering development path",
+                "career_position_label": "Position",
+                "career_pos_1": "Site Manager",
+                "career_pos_2": "Site / Installation Engineer",
+                "career_pos_3": "Structure Fitter / Installer",
+                "career_cv_label": "CV / Qualifications (PDF)",
+                "career_file_hint": "Maximum size: 5MB",
+                "career_message_label": "Experience and Competencies",
+                "form_placeholder_career_message": "Briefly describe your experience in the construction industry...",
+                "career_privacy_label": "I consent to the processing of my data for recruitment purposes.",
+                "career_submit": "Apply Now",
+                "career_success": "Your application has been registered in the HR system."
+            },
+            "de": {
+                "page_title": "Veles Construction | Industriehallen & Generalunternehmung",
+                "meta_description": "Veles Construction - Spezialist für Industrie- und Lagerhallenbau sowie technologische Installationen. Europäische Standards, polnische Realisierung.",
+                "nav_start": "Start",
+                "nav_why": "Über uns",
+                "nav_services": "Leistungen",
+                "nav_realizations": "Projekte",
+                "nav_process": "Prozess",
+                "nav_career": "Karriere",
+                "nav_faq": "FAQ",
+                "nav_contact": "Kontakt",
+                "hero_h1": "Bauen mit Präzision.<br>Europäischer Standard.<br>Polnische Realisierung.",
+                "hero_p": "Generalunternehmung für Industriehallen, Lager und technologische Installationen. Ingenieurtechnische Präzision, kompromisslose Qualität. Sprachen: PL · EN · DE · FR · RU · UA",
+                "hero_cta_primary": "Projekt starten",
+                "hero_cta_secondary": "Unsere Projekte",
+                "trust_1": "✓ Realisierungen in Deutschland & Norwegen",
+                "trust_2": "✓ 100% Termintreue",
+                "trust_3": "✓ Eurocode & DIN Normen",
+                "trust_4": "✓ Full Project Management",
+                "why_title": "Warum Veles Construction?",
+                "pillar_1_h3": "Ingenieurtechnische Präzision",
+                "pillar_1_p": "Erfahrung aus skandinavischen und deutschen Märkten ermöglicht es uns, komplexeste Stahl- und Betonkonstruktionen nach Eurocodes zu realisieren.",
+                "pillar_2_h3": "Technologie & Installationen",
+                "pillar_2_p": "Wir bauen nicht nur Wände. Wir planen und realisieren fortschrittliche Industrieinstallationen, HLK und Gebäudeautomation (BMS).",
+                "pillar_3_h3": "Generalunternehmung",
+                "pillar_3_p": "Wir übernehmen die volle Verantwortung für den Bauprozess. Von der Baugenehmigung über die Montage bis hin zur Endabnahme.",
+                "services_title": "Leistungsspektrum",
+                "service_1_h3": "Stahlhallen & Lager",
+                "service_1_p": "Planung und Montage von Stahlkonstruktionen. Umfassender Bau von Großobjekten, Logistik- und Produktionszentren.",
+                "service_1_scope": "Konstruktionsoptimierung",
+                "service_2_h3": "Industrieinstallationen",
+                "service_2_p": "Ausführung von fortschrittlichen HLK-Systemen, Starkstromanlagen, Sanitärnetzen und Brandschutzsystemen.",
+                "service_2_scope": "HLK / EL / SAN / BMS",
+                "service_3_h3": "Generalunternehmung",
+                "service_3_p": "Ganzheitliche Investitionsrealisierung im 'Design & Build' System. Umfassende technische Beratung und Kostenoptimierung.",
+                "service_3_scope": "Vollständige Koordination",
+                "service_4_h3": "Projektmanagement",
+                "service_4_p": "Professionelle Bauleitung, Investorenüberwachung sowie Kosten- und Terminkontrolle mit modernen IT-Tools.",
+                "service_4_scope": "Internationale Standards",
+                "cases_title": "Fallstudien",
+                "case_1_accent": "Logistikzentrum / Poznań",
+                "case_1_h3": "Lagerhalle Klasse A",
+                "case_1_stat_1_label": "Fläche",
+                "case_1_stat_1_val": "12.500 m²",
+                "case_1_stat_2_label": "Bauzeit",
+                "case_1_stat_2_val": "6 Monate",
+                "case_1_challenge_label": "Herausforderung:",
+                "case_1_challenge_p": "Kurze Bauzeit bei schwierigen Bodenverhältnissen, die eine Pfahlgründung erforderten.",
+                "case_1_solution_label": "Lösung:",
+                "case_1_solution_p": "Einsatz von Stahlbetonfertigteilen und Optimierung der Stahldachkonstruktion.",
+                "case_1_result_label": "Ergebnis:",
+                "case_1_result_p": "Objekt im BREEAM Very Good Standard übergeben, 2 Wochen vor dem Termin.",
+                "label_before": "Vorbereitung",
+                "label_after": "Realisierung",
+                "case_2_accent": "Produktionsanlage / Wrocław",
+                "case_2_h3": "Industrieinfrastruktur",
+                "case_2_stat_1_label": "Anschlussleistung",
+                "case_2_stat_1_val": "4,5 MW",
+                "case_2_stat_2_label": "Standard",
+                "case_2_stat_2_val": "ISO 9001 / DIN",
+                "case_2_challenge_label": "Herausforderung:",
+                "case_2_challenge_p": "Montage komplexer Prozess- und Technologieanlagen in einem laufenden Betrieb.",
+                "case_2_solution_label": "Lösung:",
+                "case_2_solution_p": "Präzise Etappenplanung (BIM) und Schichtarbeit ohne Produktionsausfall.",
+                "case_2_result_label": "Ergebnis:",
+                "case_2_result_p": "Vollständige Integration von HLK- und Industrieautomationssystemen in 90 Tagen.",
+                "case_3_accent": "Energiespeicher / Gdańsk",
+                "case_3_h3": "Industriebau",
+                "case_3_stat_1_label": "Lagerhöhe",
+                "case_3_stat_1_val": "18 m",
+                "case_3_stat_2_label": "Boden",
+                "case_3_stat_2_val": "Fugenlos FM1",
+                "case_3_challenge_label": "Herausforderung:",
+                "case_3_challenge_p": "Extrem strenge Anforderungen an die Ebenheit des Bodens für Schmalgangstapler (VNA).",
+                "case_3_solution_label": "Lösung:",
+                "case_3_solution_p": "Einsatz von Lasernivellierung und speziellen Betonmischungen.",
+                "case_3_result_label": "Ergebnis:",
+                "case_3_result_p": "Höchste Bodenebenheitsklasse durch unabhängiges Prüfzertifikat bestätigt.",
+                "process_title": "Investitionsprozess",
+                "step_1_h4": "Analyse & Konzept",
+                "step_1_p": "Wir analysieren betriebliche Bedürfnisse und wählen optimale Konstruktionslösungen aus.",
+                "step_2_h4": "BIM Planung",
+                "step_2_p": "Wir erstellen ein digitales Gebäudemodell (BIM), um Kollisionen zu vermeiden und Kosten präzise zu planen.",
+                "step_3_h4": "Genehmigungen",
+                "step_3_p": "Wir vervollständigen die Unterlagen und holen die notwendigen administrativen und technischen Genehmigungen ein.",
+                "step_4_h4": "Bau & Montage",
+                "step_4_p": "Wir führen Erdarbeiten, Montage und Installation unter strenger Ingenieuraufsicht aus.",
+                "step_5_h4": "Inbetriebnahme",
+                "step_5_p": "Wir führen Systemtests durch, schulen das Personal und übergeben das Objekt zur Nutzung.",
+                "faq_title": "FAQ",
+                "faq_1_q": "Wie lange dauert der Bau einer typischen Halle?",
+                "faq_1_a": "Eine Standardhalle von 1000-2000 m² wird in 4-6 Monaten gebaut, je nach Komplexität der Installationen.",
+                "faq_2_q": "Helfen Sie bei der Erlangung der Baugenehmigung?",
+                "faq_2_a": "Ja, im Rahmen der Generalunternehmung übernehmen wir den gesamten administrativen und rechtlichen Prozess.",
+                "faq_3_q": "Bauen Sie nach Eurocode-Normen?",
+                "faq_3_a": "Alle unsere Entwürfe und Ausführungen entsprechen strikt den europäischen Normen (Eurocodes).",
+                "faq_4_q": "Welche Industrieinstallationen führen Sie aus?",
+                "faq_4_a": "Wir decken das gesamte Spektrum ab: HLK, Trafostationen, Druckluft, Sprinkleranlagen und Prozessautomation.",
+                "faq_5_q": "Bieten Sie einen Nachgarantieservice an?",
+                "faq_5_a": "Wir bieten eine 24/7-Servicebetreuung für wichtige Systeme und regelmäßige Inspektionen der Konstruktion.",
+                "contact_h2": "Bereit für einen neuen Standard?",
+                "contact_p": "Unsere Ingenieure rufen Sie innerhalb von 24 Stunden zurück, um Ihre Anfrage zu analysieren.",
+                "contact_direct_p": "Technik:",
+                "form_name_label": "Name / Firma",
+                "form_email_label": "Geschäftliche E-Mail",
+                "form_phone_label": "Telefon",
+                "form_location_label": "Investitionsstandort",
+                "form_budget_label": "Geplantes Budget",
+                "form_message_label": "Umfang / Spezifikation",
+                "form_privacy_label": "Ich akzeptiere die Datenschutzbestimmungen und den technischen Kontakt.",
+                "form_submit": "Anfrage senden",
+                "form_placeholder_location": "z.B. Warschau / Berlin",
+                "form_placeholder_message": "Beschreiben Sie kurz die Hallenparameter oder den Installationsumfang...",
+                "form_success": "Vielen Dank. Die Anfrage wurde an die Kalkulationsabteilung weitergeleitet.",
+                "footer_brand_p": "Hallenbau und Industrieinstallationen.<br>Europäischer Standard, polnische Realisierung.",
+                "footer_syndicate_link": "Veles Syndicate",
+                "footer_academy_link": "Veles Academy — Schulungen für Ingenieure",
+                "footer_digital_link": "Veles Digital — BIM und digitale Produkte",
+                "footer_interiors_link": "Veles Construction — Hallen und Konstruktionen",
+                "footer_nav_label": "Navigation",
+                "footer_rights": "© 2024 Veles Construction. Teil der Veles Syndicate. Alle Rechte vorbehalten.",
+                "footer_made_by": "made by",
+                "career_h2": "Werden Sie Teil des Veles Teams",
+                "career_p": "Wir suchen Ingenieure und Spezialisten, für die Präzision das Fundament ist. Wir bauen ein Team auf Basis technischer Kompetenz auf.",
+                "career_benefits_p": "Wir garantieren:",
+                "career_benefit_1": "Teilnahme an einzigartigen Industrieprojekten",
+                "career_benefit_2": "Arbeit in BIM-Methodik und moderne Werkzeuge",
+                "career_benefit_3": "Klare ingenieurtechnische Entwicklungspfade",
+                "career_position_label": "Position",
+                "career_pos_1": "Bauleiter",
+                "career_pos_2": "Bau- / Installationsingenieur",
+                "career_pos_3": "Konstruktionsmechaniker / Monteur",
+                "career_cv_label": "Lebenslauf / Qualifikationen (PDF)",
+                "career_file_hint": "Maximale Größe: 5MB",
+                "career_message_label": "Erfahrung und Kompetenzen",
+                "form_placeholder_career_message": "Beschreiben Sie kurz Ihre Erfahrung in der Baubranche...",
+                "career_privacy_label": "Ich bin mit der Verarbeitung meiner Daten zu Rekrutierungszwecken einverstanden.",
+                "career_submit": "Jetzt bewerben",
+                "career_success": "Ihre Bewerbung wurde im HR-System registriert."
+            },
+            "fr": {
+                "page_title": "Veles Construction | Hangars Industriels & Entreprise Générale",
+                "meta_description": "Veles Construction - spécialiste de la construction de hangars industriels, d'entrepôts et d'installations technologiques. Standards européens.",
+                "nav_start": "Accueil",
+                "nav_why": "À propos",
+                "nav_services": "Services",
+                "nav_realizations": "Réalisations",
+                "nav_process": "Processus",
+                "nav_career": "Carrière",
+                "nav_faq": "FAQ",
+                "nav_contact": "Contact",
+                "hero_h1": "Construire avec Précision.<br>Standard Européen.<br>Réalisation Polonaise.",
+                "hero_p": "Entreprise générale pour hangars industriels, entrepôts et installations technologiques. Précision d'ingénierie, qualité sans compromis. Communication : PL · EN · DE · FR · RU · UA",
+                "hero_cta_primary": "Démarrer un projet",
+                "hero_cta_secondary": "Nos réalisations",
+                "trust_1": "✓ Projets en Allemagne & Norvège",
+                "trust_2": "✓ 100% Respect des délais",
+                "trust_3": "✓ Normes Eurocode & DIN",
+                "trust_4": "✓ Gestion de projet complète",
+                "why_title": "Pourquoi Veles Construction ?",
+                "pillar_1_h3": "Précision d'Ingénierie",
+                "pillar_1_p": "L'expérience des marchés scandinaves et allemands nous permet de réaliser les structures en acier et béton les plus complexes selon les Eurocodes.",
+                "pillar_2_h3": "Technologie & Installations",
+                "pillar_2_p": "Nous ne faisons pas que construire des murs. Nous concevons et mettons en œuvre des installations industrielles avancées, CVC et GTB.",
+                "pillar_3_h3": "Entreprise Générale",
+                "pillar_3_p": "Nous assumons l'entière responsabilité du processus de construction. Du permis de construire au montage et aux inspections finales.",
+                "services_title": "Nos Services",
+                "service_1_h3": "Hangars & Entrepôts",
+                "service_1_p": "Conception et montage de structures métalliques. Construction complète de complexes logistiques et centres de production.",
+                "service_1_scope": "Optimisation des structures",
+                "service_2_h3": "Installations Industrielles",
+                "service_2_p": "Réalisation de systèmes CVC, installations électriques haute puissance, réseaux sanitaires et systèmes incendie.",
+                "service_2_scope": "CVC / EL / SAN / GTB",
+                "service_3_h3": "Entreprise Générale",
+                "service_3_p": "Réalisation complète en mode 'Design & Build'. Conseil technique complet et optimisation des coûts d'investissement.",
+                "service_3_scope": "Coordination Totale",
+                "service_4_h3": "Gestion de Projet",
+                "service_4_p": "Gestion de chantier professionnelle, surveillance et contrôle des coûts/délais avec des outils informatiques modernes.",
+                "service_4_scope": "Standards Internationaux",
+                "cases_title": "Études de Cas",
+                "case_1_accent": "Centre Logistique / Poznań",
+                "case_1_h3": "Entrepôt de Classe A",
+                "case_1_stat_1_label": "Surface",
+                "case_1_stat_1_val": "12 500 m²",
+                "case_1_stat_2_label": "Temps de Construction",
+                "case_1_stat_2_val": "6 Mois",
+                "case_1_challenge_label": "Défi :",
+                "case_1_challenge_p": "Délai serré avec des conditions de sol difficiles nécessitant un pilotis.",
+                "case_1_solution_label": "Solution :",
+                "case_1_solution_p": "Utilisation d'éléments en béton armé préfabriqués et optimisation de la charpente métallique.",
+                "case_1_result_label": "Résultat :",
+                "case_1_result_p": "Bâtiment livré au standard BREEAM Very Good, 2 semaines avant le délai.",
+                "label_before": "Préparation",
+                "label_after": "Exécution",
+                "case_2_accent": "Usine de Production / Wrocław",
+                "case_2_h3": "Infrastructure Industrielle",
+                "case_2_stat_1_label": "Puissance",
+                "case_2_stat_1_val": "4.5 MW",
+                "case_2_stat_2_label": "Standard",
+                "case_2_stat_2_val": "ISO 9001 / DIN",
+                "case_2_challenge_label": "Défi :",
+                "case_2_challenge_p": "Installation de systèmes de process complexes dans une usine en fonctionnement.",
+                "case_2_solution_label": "Solution :",
+                "case_2_solution_p": "Planification par étapes précise (BIM) et travail posté sans arrêt de production.",
+                "case_2_result_label": "Résultat :",
+                "case_2_result_p": "Intégration complète des systèmes CVC et d'automatisme en 90 jours.",
+                "case_3_accent": "Stockage d'Énergie / Gdańsk",
+                "case_3_h3": "Construction Industrielle",
+                "case_3_stat_1_label": "Hauteur de stockage",
+                "case_3_stat_1_val": "18 m",
+                "case_3_stat_2_label": "Dalle",
+                "case_3_stat_2_val": "Sans joint FM1",
+                "case_3_challenge_label": "Défi :",
+                "case_3_challenge_p": "Normes de planéité de dalle extrêmement rigoureuses pour chariots VNA.",
+                "case_3_solution_label": "Solution :",
+                "case_3_solution_p": "Nivellement laser et mélanges de béton spécialisés.",
+                "case_3_result_label": "Résultat :",
+                "case_3_result_p": "Classe de planéité la plus élevée confirmée par un audit indépendant.",
+                "process_title": "Processus d'Investissement",
+                "step_1_h4": "Analyse & Concept",
+                "step_1_p": "Analyse des besoins opérationnels et choix des solutions constructives optimales.",
+                "step_2_h4": "Conception BIM",
+                "step_2_p": "Modélisation numérique (BIM) pour éliminer les collisions et planifier les coûts.",
+                "step_3_h4": "Permis & Formalités",
+                "step_3_p": "Gestion de la documentation et obtention des permis administratifs et techniques.",
+                "step_4_h4": "Construction",
+                "step_4_p": "Terrassement, montage de la structure et installations sous supervision stricte.",
+                "step_5_h4": "Mise en service",
+                "step_5_p": "Tests des systèmes, formation du personnel et remise de l'ouvrage.",
+                "faq_title": "FAQ",
+                "faq_1_q": "Quel est le temps de construction d'un hangar typique ?",
+                "faq_1_a": "Un hangar standard de 1000-2000 m² est construit en 4-6 mois, selon la complexité.",
+                "faq_2_q": "Aidez-vous pour le permis de construire ?",
+                "faq_2_a": "Oui, nous gérons l'intégralité du processus administratif et juridique.",
+                "faq_3_q": "Construisez-vous selon les Eurocodes ?",
+                "faq_3_a": "Toutes nos réalisations sont strictement conformes aux normes européennes Eurocodes.",
+                "faq_4_q": "Quelles installations industrielles réalisez-vous ?",
+                "faq_4_a": "CVC, transformateurs, air comprimé, sprinkler et automatisation de process.",
+                "faq_5_q": "Offrez-vous un service après-garantie ?",
+                "faq_5_a": "Maintenance 24/7 pour les systèmes clés et inspections périodiques des structures.",
+                "contact_h2": "Prêt pour un nouveau standard ?",
+                "contact_p": "Nos ingénieurs vous rappelleront sous 24h pour analyser votre demande.",
+                "contact_direct_p": "Dép. Technique :",
+                "form_name_label": "Nom / Entreprise",
+                "form_email_label": "Email professionnel",
+                "form_phone_label": "Téléphone",
+                "form_location_label": "Lieu de l'investissement",
+                "form_budget_label": "Budget estimé",
+                "form_message_label": "Cahier des charges",
+                "form_privacy_label": "J'accepte la politique de confidentialité.",
+                "form_submit": "Envoyer la demande",
+                "form_placeholder_location": "ex : Varsovie / Berlin",
+                "form_placeholder_message": "Décrivez brièvement les paramètres ou l'installation...",
+                "form_success": "Merci. Votre demande a été transmise au bureau d'études.",
+                "footer_brand_p": "Construction de hangars et installations industrielles.<br>Standard européen, réalisation polonaise.",
+                "footer_syndicate_link": "Veles Syndicate",
+                "footer_academy_link": "Veles Academy — Formation pour Ingénieurs",
+                "footer_digital_link": "Veles Digital — BIM et produits numériques",
+                "footer_interiors_link": "Veles Construction — Hangars et Structures",
+                "footer_nav_label": "Navigation",
+                "footer_rights": "© 2024 Veles Construction. Groupe Veles. Tous droits réservés.",
+                "footer_made_by": "made by",
+                "career_h2": "Rejoignez l'équipe Veles",
+                "career_p": "Nous cherchons des ingénieurs et spécialistes pour qui la précision est fondamentale.",
+                "career_benefits_p": "Nous garantissons :",
+                "career_benefit_1": "Participation à des projets industriels uniques",
+                "career_benefit_2": "Travail en méthodologie BIM",
+                "career_benefit_3": "Parcours d'évolution clair",
+                "career_position_label": "Poste",
+                "career_pos_1": "Conducteur de travaux",
+                "career_pos_2": "Ingénieur Chantier / Études",
+                "career_pos_3": "Monteur de structures / Installateur",
+                "career_cv_label": "CV / Certificats (PDF)",
+                "career_file_hint": "Taille max : 5Mo",
+                "career_message_label": "Expérience et compétences",
+                "form_placeholder_career_message": "Décrivez votre expérience...",
+                "career_privacy_label": "J'accepte le traitement de mes données.",
+                "career_submit": "Postuler",
+                "career_success": "Candidature enregistrée."
+            },
+            "es": {
+                "page_title": "Veles Construction | Naves Industriales y Construcción General",
+                "meta_description": "Veles Construction - especialista en construcción de naves industriales, almacenes e instalaciones tecnológicas. Estándares europeos.",
+                "nav_start": "Inicio",
+                "nav_why": "Nosotros",
+                "nav_services": "Servicios",
+                "nav_realizations": "Proyectos",
+                "nav_process": "Proceso",
+                "nav_career": "Carrera",
+                "nav_faq": "FAQ",
+                "nav_contact": "Contacto",
+                "hero_h1": "Construimos con Precisión.<br>Estándar Europeo.<br>Realización Polaca.",
+                "hero_p": "Construcción general de naves industriales, almacenes e instalaciones tecnológicas. Precisión de ingeniería, calidad sin compromisos.",
+                "hero_cta_primary": "Iniciar proyecto",
+                "hero_cta_secondary": "Proyectos",
+                "trust_1": "✓ Proyectos en Alemania y Noruega",
+                "trust_2": "✓ 100% Cumplimiento de plazos",
+                "trust_3": "✓ Normas Eurocodigo y DIN",
+                "trust_4": "✓ Gestión de proyecto integral",
+                "why_title": "¿Por qué Veles Construction?",
+                "pillar_1_h3": "Precisión de Ingeniería",
+                "pillar_1_p": "Experiencia en mercados escandinavos y alemanes para realizar estructuras de acero y hormigón según Eurocódigos.",
+                "pillar_2_h3": "Tecnología e Instalaciones",
+                "pillar_2_p": "Diseñamos e implementamos instalaciones industriales avanzadas, HVAC y automatización de edificios (BMS).",
+                "pillar_3_h3": "Construcción General",
+                "pillar_3_p": "Responsabilidad total del proceso. Desde permisos de construcción hasta montaje e inspecciones finales.",
+                "services_title": "Servicios",
+                "service_1_h3": "Naves y Almacenes",
+                "service_1_p": "Diseño y montaje de estructuras metálicas. Construcción de centros logísticos y de producción.",
+                "service_1_scope": "Optimización estructural",
+                "service_2_h3": "Instalaciones Industriales",
+                "service_2_p": "Sistemas HVAC, instalaciones eléctricas, redes sanitarias y sistemas contra incendios.",
+                "service_2_scope": "HVAC / EL / SAN / BMS",
+                "service_3_h3": "Construcción General",
+                "service_3_p": "Realización 'Design & Build'. Consultoría técnica y optimización de costes.",
+                "service_3_scope": "Coordinación Total",
+                "service_4_h3": "Gestión de Proyecto",
+                "service_4_p": "Gestión de obra, supervisión y control de costes con herramientas IT modernas.",
+                "service_4_scope": "Estándares Internacionales",
+                "cases_title": "Casos de Éxito",
+                "case_1_accent": "Centro Logístico / Poznań",
+                "case_1_h3": "Nave de Clase A",
+                "case_1_stat_1_label": "Superficie",
+                "case_1_stat_1_val": "12.500 m²",
+                "case_1_stat_2_label": "Tiempo",
+                "case_1_stat_2_val": "6 Meses",
+                "case_1_challenge_label": "Desafío:",
+                "case_1_challenge_p": "Plazo ajustado con condiciones de suelo difíciles.",
+                "case_1_solution_label": "Solución:",
+                "case_1_solution_p": "Elementos prefabricados y optimización de la estructura del tejado.",
+                "case_1_result_label": "Resultado:",
+                "case_1_result_p": "Entrega 2 semanas antes de lo previsto.",
+                "label_before": "Preparación",
+                "label_after": "Ejecución",
+                "case_2_accent": "Planta de Producción / Wrocław",
+                "case_2_h3": "Infraestructura Industrial",
+                "case_2_stat_1_label": "Potencia",
+                "case_2_stat_1_val": "4.5 MW",
+                "case_2_stat_2_label": "Estándar",
+                "case_2_stat_2_val": "ISO 9001 / DIN",
+                "case_2_challenge_label": "Desafío:",
+                "case_2_challenge_p": "Instalación de sistemas complejos en planta operativa.",
+                "case_2_solution_label": "Solución:",
+                "case_2_solution_p": "Planificación BIM y trabajo por turnos.",
+                "case_2_result_label": "Resultado:",
+                "case_2_result_p": "Integración total en 90 días.",
+                "case_3_accent": "Almacén / Gdańsk",
+                "case_3_h3": "Construcción Industrial",
+                "case_3_stat_1_label": "Altura",
+                "case_3_stat_1_val": "18 m",
+                "case_3_stat_2_label": "Suelo",
+                "case_3_stat_2_val": "Sin juntas FM1",
+                "case_3_challenge_label": "Desafío:",
+                "case_3_challenge_p": "Normas de planicidad estrictas para carretillas VNA.",
+                "case_3_solution_label": "Solución:",
+                "case_3_solution_p": "Nivelación láser y mezclas especiales.",
+                "case_3_result_label": "Resultado:",
+                "case_3_result_p": "Máxima clase de planicidad certificada.",
+                "process_title": "Proceso",
+                "step_1_h4": "Concepto",
+                "step_1_p": "Análisis de necesidades y soluciones óptimas.",
+                "step_2_h4": "Diseño BIM",
+                "step_2_p": "Modelado digital para eliminar colisiones.",
+                "step_3_h4": "Permisos",
+                "step_3_p": "Gestión de documentación y permisos.",
+                "step_4_h4": "Construcción",
+                "step_4_p": "Ejecución bajo supervisión técnica.",
+                "step_5_h4": "Entrega",
+                "step_5_p": "Pruebas finales y entrega del objeto.",
+                "faq_title": "FAQ",
+                "faq_1_q": "¿Tiempo de construcción?",
+                "faq_1_a": "Entre 4 y 6 meses para naves estándar.",
+                "faq_2_q": "¿Ayudan con permisos?",
+                "faq_2_a": "Sí, gestionamos todo el proceso legal.",
+                "faq_3_q": "¿Normas Eurocodigo?",
+                "faq_3_a": "Sí, cumplimos estrictamente con Eurocódigos.",
+                "faq_4_q": "¿Instalaciones?",
+                "faq_4_a": "HVAC, estaciones eléctricas, aire comprimido y automatización.",
+                "faq_5_q": "¿Servicio post-garantía?",
+                "faq_5_a": "Mantenimiento 24/7 disponible.",
+                "contact_h2": "¿Listo para un nuevo estándar?",
+                "contact_p": "Le llamaremos en 24h.",
+                "contact_direct_p": "Dpto. Técnico:",
+                "form_name_label": "Nombre / Empresa",
+                "form_email_label": "Email corporativo",
+                "form_phone_label": "Teléfono",
+                "form_location_label": "Ubicación",
+                "form_budget_label": "Presupuesto",
+                "form_message_label": "Especificaciones",
+                "form_privacy_label": "Acepto la política de privacidad.",
+                "form_submit": "Enviar",
+                "form_placeholder_location": "ej. Varsovia / Madrid",
+                "form_placeholder_message": "Breve descripción...",
+                "form_success": "Gracias. Su consulta ha sido enviada.",
+                "footer_brand_p": "Construcción industrial. Estándar europeo.",
+                "footer_syndicate_link": "Veles Syndicate",
+                "footer_academy_link": "Veles Academy",
+                "footer_digital_link": "Veles Digital",
+                "footer_interiors_link": "Veles Construction",
+                "footer_nav_label": "Navegación",
+                "footer_rights": "© 2024 Veles Construction. Todos los derechos reservados.",
+                "footer_made_by": "made by",
+                "career_h2": "Únete al equipo",
+                "career_p": "Buscamos ingenieros y especialistas.",
+                "career_benefits_p": "Ofrecemos:",
+                "career_benefit_1": "Proyectos industriales únicos",
+                "career_benefit_2": "Metodología BIM",
+                "career_benefit_3": "Desarrollo profesional",
+                "career_position_label": "Puesto",
+                "career_pos_1": "Jefe de Obra",
+                "career_pos_2": "Ingeniero de Instalaciones",
+                "career_pos_3": "Montador de estructuras",
+                "career_cv_label": "CV (PDF)",
+                "career_file_hint": "Máx 5MB",
+                "career_message_label": "Experiencia",
+                "form_placeholder_career_message": "Describe tu experiencia...",
+                "career_privacy_label": "Acepto los términos.",
+                "career_submit": "Aplicar",
+                "career_success": "Aplicación recibida."
+            },
+            "ru": {
+                "page_title": "Veles Construction | Промышленные залы и генподряд",
+                "meta_description": "Veles Construction - проектирование и строительство промышленных залов, складов и технологических установок. Европейские стандарты.",
+                "nav_start": "Главная",
+                "nav_why": "О нас",
+                "nav_services": "Услуги",
+                "nav_realizations": "Проекты",
+                "nav_process": "Процесс",
+                "nav_career": "Карьера",
+                "nav_faq": "FAQ",
+                "nav_contact": "Контакт",
+                "hero_h1": "Строим с точностью.<br>Европейский стандарт.<br>Польская реализация.",
+                "hero_p": "Генеральный подряд в строительстве промышленных залов, складов и технологических установок. Инженерная точность.",
+                "hero_cta_primary": "Начать проект",
+                "hero_cta_secondary": "Наши работы",
+                "trust_1": "✓ Реализации в Германии и Норвегии",
+                "trust_2": "✓ 100% соблюдение сроков",
+                "trust_3": "✓ Нормы Еврокод и DIN",
+                "trust_4": "✓ Полное управление проектами",
+                "why_title": "Почему Veles Construction?",
+                "pillar_1_h3": "Инженерная точность",
+                "pillar_1_p": "Опыт работы на скандинавском и немецком рынках позволяет нам возводить сложные стальные и бетонные конструкции.",
+                "pillar_2_h3": "Технологии и сети",
+                "pillar_2_p": "Мы проектируем и внедряем передовые промышленные установки, системы ОВиК и автоматизацию (BMS).",
+                "pillar_3_h3": "Генеральный подряд",
+                "pillar_3_p": "Мы берем на себя полную ответственность: от разрешения на строительство до финальной приемки.",
+                "services_title": "Наши услуги",
+                "service_1_h3": "Стальные залы и склады",
+                "service_1_p": "Проектирование и монтаж металлоконструкций. Строительство логистических и производственных центров.",
+                "service_2_h3": "Промышленные сети",
+                "service_2_p": "Системы ОВиК, электросети высокой мощности, санитарные сети и противопожарные системы.",
+                "service_3_h3": "Генеральный подряд",
+                "service_3_p": "Комплексная реализация в системе «Проектируй и Строй». Оптимизация затрат.",
+                "service_4_h3": "Project Management",
+                "service_4_p": "Профессиональный надзор и контроль с использованием современных ИТ-инструментов.",
+                "cases_title": "Портфолио",
+                "case_1_accent": "Логистический центр / Познань",
+                "case_1_h3": "Складской зал класса А",
+                "case_1_stat_1_label": "Площадь",
+                "case_1_stat_1_val": "12 500 м²",
+                "case_1_stat_2_label": "Срок",
+                "case_1_stat_2_val": "6 месяцев",
+                "label_before": "Подготовка",
+                "label_after": "Реализация",
+                "case_2_accent": "Завод / Вроцлав",
+                "case_2_h3": "Промышленная инфраструктура",
+                "case_2_stat_1_label": "Мощность",
+                "case_2_stat_1_val": "4.5 МВт",
+                "case_2_stat_2_label": "Стандарт",
+                "case_2_stat_2_val": "ISO 9001 / DIN",
+                "case_3_accent": "Хранилище / Гданьск",
+                "case_3_h3": "Промышленное строительство",
+                "case_3_stat_1_label": "Высота",
+                "case_3_stat_1_val": "18 м",
+                "case_3_stat_2_label": "Пол",
+                "case_3_stat_2_val": "Бесшовный FM1",
+                "process_title": "Процесс",
+                "step_1_h4": "Анализ и концепция",
+                "step_2_h4": "BIM проектирование",
+                "step_3_h4": "Разрешения",
+                "step_4_h4": "Строительство",
+                "step_5_h4": "Приемка",
+                "faq_title": "Вопросы",
+                "faq_1_q": "Срок строительства?",
+                "faq_1_a": "Обычно 4-6 месяцев для стандартного зала.",
+                "faq_2_q": "Помогаете с разрешениями?",
+                "faq_2_a": "Да, ведем весь административный процесс.",
+                "faq_3_q": "Нормы Еврокод?",
+                "faq_3_a": "Да, строго соблюдаем европейские нормы.",
+                "faq_4_q": "Промышленные сети?",
+                "faq_4_a": "ОВиК, трафостанции, сжатый воздух и автоматика.",
+                "faq_5_q": "Гарантийный сервис?",
+                "faq_5_a": "Поддержка 24/7 и технические осмотры.",
+                "contact_h2": "Готовы к новому стандарту?",
+                "contact_p": "Инженеры перезвонят вам в течение 24 часов.",
+                "contact_direct_p": "Технический отдел:",
+                "form_name_label": "Имя / Компания",
+                "form_email_label": "Email",
+                "form_phone_label": "Телефон",
+                "form_location_label": "Локация",
+                "form_budget_label": "Бюджет",
+                "form_message_label": "Описание",
+                "form_privacy_label": "Принимаю политику конфиденциальности.",
+                "form_submit": "Отправить",
+                "form_placeholder_location": "напр. Варшава / Берлин",
+                "form_placeholder_message": "Опишите параметры проекта...",
+                "form_success": "Спасибо. Запрос передан в отдел предложений.",
+                "footer_brand_p": "Строительство залов и промышленные сети.",
+                "footer_syndicate_link": "Veles Syndicate",
+                "footer_academy_link": "Veles Academy",
+                "footer_digital_link": "Veles Digital",
+                "footer_interiors_link": "Veles Construction",
+                "footer_rights": "© 2024 Veles Construction. Все права защищены.",
+                "footer_made_by": "разработка",
+                "career_h2": "В команду Veles",
+                "career_p": "Ищем инженеров и специалистов.",
+                "career_benefits_p": "Гарантируем:",
+                "career_benefit_1": "Уникальные промышленные проекты",
+                "career_benefit_2": "Работа в BIM",
+                "career_benefit_3": "Инженерный рост",
+                "career_position_label": "Должность",
+                "career_pos_1": "Руководитель стройки",
+                "career_pos_2": "Инженер сетей",
+                "career_pos_3": "Монтажник металлоконструкций",
+                "career_cv_label": "Резюме (PDF)",
+                "career_file_hint": "Макс. 5МБ",
+                "career_message_label": "Опыт",
+                "form_placeholder_career_message": "Ваш опыт...",
+                "career_privacy_label": "Согласен на обработку данных.",
+                "career_submit": "Подать заявку",
+                "career_success": "Заявка зарегистрирована."
+            },
+            "ua": {
+                "page_title": "Veles Construction | Промислові зали та генпідряд",
+                "meta_description": "Veles Construction - спеціаліст з будівництва промислових залів, складів та технологічних установок. Європейські стандарти.",
+                "nav_start": "Головна",
+                "nav_why": "Про нас",
+                "nav_services": "Послуги",
+                "nav_realizations": "Проекти",
+                "nav_process": "Процес",
+                "nav_career": "Кар'єра",
+                "nav_faq": "FAQ",
+                "nav_contact": "Контакт",
+                "hero_h1": "Будуємо з точністю.<br>Європейський стандарт.<br>Польська реалізація.",
+                "hero_p": "Генеральний підряд у будівництві промислових залів, складів та технологічних установок. Інженерна точність.",
+                "hero_cta_primary": "Почати проект",
+                "hero_cta_secondary": "Наші роботи",
+                "trust_1": "✓ Реалізації в Німеччині та Норвегії",
+                "trust_2": "✓ 100% дотримання термінів",
+                "trust_3": "✓ Норми Єврокод та DIN",
+                "trust_4": "✓ Повне управління проектами",
+                "why_title": "Чому Veles Construction?",
+                "pillar_1_h3": "Інженерна точність",
+                "pillar_1_p": "Досвід на скандинавському та німецькому ринках дозволяє нам зводити складні сталеві та бетонні конструкції.",
+                "pillar_2_h3": "Технології та мережі",
+                "pillar_2_p": "Ми проектуємо та впроваджуємо передові промислові установки, системи ОВіК та автоматизацію (BMS).",
+                "pillar_3_h3": "Генеральний підряд",
+                "pillar_3_p": "Ми беремо на себе повну відповідальність: від дозволу на будівництво до фінального приймання.",
+                "services_title": "Наші послуги",
+                "service_1_h3": "Сталеві зали та склади",
+                "service_1_p": "Проектування та монтаж металоконструкцій. Будівництво логістичних та виробничих центрів.",
+                "service_2_h3": "Промислові мережі",
+                "service_2_p": "Системи ОВіК, електромережі високої потужності, санітарні мережі та протипожежні системи.",
+                "service_3_h3": "Генеральний підряд",
+                "service_3_p": "Комплексна реалізація в системі «Проектуй та Будуй». Оптимізація витрат.",
+                "service_4_h3": "Project Management",
+                "service_4_p": "Професійний нагляд та контроль з використанням сучасних ІТ-інструментів.",
+                "cases_title": "Портфоліо",
+                "case_1_accent": "Логістичний центр / Познань",
+                "case_1_h3": "Складський зал класу А",
+                "case_1_stat_1_label": "Площа",
+                "case_1_stat_1_val": "12 500 м²",
+                "case_1_stat_2_label": "Термін",
+                "case_1_stat_2_val": "6 місяців",
+                "label_before": "Підготовка",
+                "label_after": "Реалізація",
+                "case_2_accent": "Завод / Вроцлав",
+                "case_2_h3": "Промислова інфраструктура",
+                "case_2_stat_1_label": "Потужність",
+                "case_2_stat_1_val": "4.5 МВт",
+                "case_2_stat_2_label": "Стандарт",
+                "case_2_stat_2_val": "ISO 9001 / DIN",
+                "case_3_accent": "Сховище / Гданськ",
+                "case_3_h3": "Промислове будівництво",
+                "case_3_stat_1_label": "Висота",
+                "case_3_stat_1_val": "18 м",
+                "case_3_stat_2_label": "Підлога",
+                "case_3_stat_2_val": "Безшовна FM1",
+                "process_title": "Процес",
+                "step_1_h4": "Аналіз та концепція",
+                "step_2_h4": "BIM проектування",
+                "step_3_h4": "Дозволи",
+                "step_4_h4": "Будівництво",
+                "step_5_h4": "Приймання",
+                "faq_title": "Питання",
+                "faq_1_q": "Термін будівництва?",
+                "faq_1_a": "Зазвичай 4-6 місяців для стандартного залу.",
+                "faq_2_q": "Допомагаєте з дозволами?",
+                "faq_2_a": "Так, ведемо весь адміністративний процес.",
+                "faq_3_q": "Норми Єврокод?",
+                "faq_3_a": "Так, суворо дотримуємось європейських норм.",
+                "faq_4_q": "Промислові мережі?",
+                "faq_4_a": "ОВіК, трафостанції, стиснене повітря та автоматика.",
+                "faq_5_q": "Гарантійний сервіс?",
+                "faq_5_a": "Підтримка 24/7 та технічні огляди.",
+                "contact_h2": "Готові до нового стандарту?",
+                "contact_p": "Інженери зателефонують вам протягом 24 годин.",
+                "contact_direct_p": "Технічний відділ:",
+                "form_name_label": "Ім'я / Компанія",
+                "form_email_label": "Email",
+                "form_phone_label": "Телефон",
+                "form_location_label": "Локація",
+                "form_budget_label": "Бюджет",
+                "form_message_label": "Опис",
+                "form_privacy_label": "Приймаю політику конфіденційності.",
+                "form_submit": "Надіслати",
+                "form_placeholder_location": "напр. Варшава / Берлін",
+                "form_placeholder_message": "Опишіть параметри проекту...",
+                "form_success": "Дякуємо. Запит передано до відділу пропозицій.",
+                "footer_brand_p": "Будівництво залів та промислові мережі.",
+                "footer_syndicate_link": "Veles Syndicate",
+                "footer_academy_link": "Veles Academy",
+                "footer_digital_link": "Veles Digital",
+                "footer_interiors_link": "Veles Construction",
+                "footer_rights": "© 2024 Veles Construction. Всі права захищені.",
+                "footer_made_by": "розробка",
+                "career_h2": "В команду Veles",
+                "career_p": "Шукаємо інженерів та спеціалістів.",
+                "career_benefits_p": "Гарантуємо:",
+                "career_benefit_1": "Унікальні промислові проекти",
+                "career_benefit_2": "Робота в BIM",
+                "career_benefit_3": "Інженерне зростання",
+                "career_position_label": "Посада",
+                "career_pos_1": "Керівник будівництва",
+                "career_pos_2": "Інженер мереж",
+                "career_pos_3": "Монтажник металоконструкцій",
+                "career_cv_label": "Резюме (PDF)",
+                "career_file_hint": "Макс. 5МБ",
+                "career_message_label": "Досвід",
+                "form_placeholder_career_message": "Ваш досвід...",
+                "career_privacy_label": "Згоден на обробку даних.",
+                "career_submit": "Подати заявку",
+                "career_success": "Заявку зареєстровано."
+            }
+        };
+
+        function changeLanguage(lang) {
+            const translation = translations[lang];
+            if (!translation) return;
+
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translation[key]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        if (key.startsWith('form_placeholder')) {
+                            element.placeholder = translation[key];
+                        }
+                    } else {
+                        element.innerHTML = translation[key];
+                    }
+                }
+            });
+
+            // Update title and meta description
+            document.title = translation.page_title;
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) metaDescription.setAttribute('content', translation.meta_description);
+
+            // Update Open Graph and Twitter meta tags
+            document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]').forEach(meta => meta.setAttribute('content', translation.page_title));
+            document.querySelectorAll('meta[property="og:description"], meta[name="twitter:description"]').forEach(meta => meta.setAttribute('content', translation.meta_description));
+
+            // Update current language display
+            const langBtn = document.getElementById('lang-btn');
+            const activeOption = document.querySelector(`.lang-option[data-lang="${lang}"]`);
+            if (langBtn && activeOption) {
+                document.getElementById('current-lang').textContent = activeOption.textContent;
+                document.querySelectorAll('.lang-option').forEach(opt => opt.classList.remove('active'));
+                activeOption.classList.add('active');
+            }
+
+            // Persistence
+            localStorage.setItem('preferred_language', lang);
+            document.documentElement.lang = lang;
+        }
+
+        // Language toggle listeners
+        document.querySelectorAll('.lang-option').forEach(option => {
+            option.addEventListener('click', () => {
+                const lang = option.getAttribute('data-lang');
+                changeLanguage(lang);
+            });
+        });
+
+        // Initialize language
+        const savedLang = localStorage.getItem('preferred_language') || 'pl';
+        changeLanguage(savedLang);
+
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const themeIcon = document.getElementById('theme-icon');
+        const headerLogoImg = document.getElementById('header-logo-img');
+        const footerLogoImg = document.getElementById('footer-logo-img');
+
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+
+        function setTheme(theme) {
+            body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+
+            const isDark = theme === 'dark';
+            themeIcon.textContent = isDark ? '☀️' : '🌙';
+
+            // Toggle logos: -reversed for dark mode (white logo), standard for light mode (dark logo)
+            const logoSrc = isDark ? 'assets/veles-construction-logo-alone-bgless.png' : 'assets/veles-construction-logo-alone-bgless.png';
+
+            if(headerLogoImg) headerLogoImg.src = logoSrc;
+            if(footerLogoImg) footerLogoImg.src = logoSrc;
+        }
+
+        // Navigation Active State on Scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Form Handling
+        const contactForm = document.getElementById('contact-form');
+        const formResponse = document.getElementById('form-response');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Simulate form submission
+            contactForm.style.display = 'none';
+            formResponse.style.display = 'block';
+
+            // Log lead data (simulated)
+            const formData = new FormData(contactForm);
+            console.log('New Lead Received:', Object.fromEntries(formData));
+        });
+
+        // Career Form Handling
+        const careerForm = document.getElementById('career-form');
+        const careerResponse = document.getElementById('career-response');
+
+        if (careerForm) {
+            careerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Simulate form submission
+                careerForm.style.display = 'none';
+                careerResponse.style.display = 'block';
+
+                const formData = new FormData(careerForm);
+                // In a production environment, you would use a service like Formspree
+                // <form action="https://formspree.io/f/your-id" method="POST" enctype="multipart/form-data">
+                console.log('New Application Received:', Object.fromEntries(formData));
+            });
+        }
+
+        // Before/After Slider Logic
+        const slider = document.getElementById('slider-1');
+        const foregroundImg = document.querySelector('.foreground-img');
+
+        if (slider) {
+            slider.addEventListener('input', (e) => {
+                const sliderPos = e.target.value;
+                foregroundImg.style.width = `${sliderPos}%`;
+            });
+        }
+
+        // Reveal Animations on Scroll
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Lazy Loading for Images
+        if ('IntersectionObserver' in window) {
+            const imgObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                        }
+                        imgObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => imgObserver.observe(img));
+        }
+    </script>
+</body>
+</html>

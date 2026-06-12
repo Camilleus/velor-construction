@@ -1,0 +1,13 @@
+/* Custom styles can be added here */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #ff0000;
+  color: white;
+}
