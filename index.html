@@ -39,8 +39,10 @@
             --border-color: rgba(255, 49, 49, 0.15);
             --header-bg: rgba(10, 10, 10, 0.95);
             --nav-link: #FFFFFF;
+            --logo-color: #E8E8E8;
 
-            /* Spacing */
+            /* Layout */
+            --header-h: 80px;
             --container-width: 1200px;
             --section-padding: 100px 20px;
 
@@ -56,6 +58,7 @@
             --header-bg: rgba(255, 255, 255, 0.95);
             --nav-link: #1A1A1A;
             --border-color: rgba(255, 49, 49, 0.05);
+            --logo-color: #9E1B32;
         }
 
         * {
@@ -107,6 +110,15 @@
             list-style: none;
         }
 
+        /* Global anchor offset so fixed header never covers section titles */
+        html {
+            scroll-padding-top: var(--header-h);
+        }
+
+        section[id], [id]:target {
+            scroll-margin-top: var(--header-h);
+        }
+
         .container {
             max-width: var(--container-width);
             margin: 0 auto;
@@ -145,8 +157,8 @@
             height: 40px;
             width: auto;
             display: block;
-            color: #9E1B32;
-            transition: transform var(--transition-speed);
+            color: var(--logo-color);
+            transition: transform var(--transition-speed), color var(--transition-speed);
         }
 
         .logo-text {
@@ -263,7 +275,7 @@
 
         /* Hero Section */
         #hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -271,7 +283,8 @@
             background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('https://images.unsplash.com/photo-1504307651254-3b1686fff3a4?auto=format&fit=crop&q=80&w=2000');
             background-size: cover;
             background-position: center;
-            padding-top: 80px;
+            padding-top: calc(var(--header-h) + 24px);
+            padding-bottom: 40px;
         }
 
         [data-theme="light"] #hero {
@@ -281,18 +294,21 @@
         }
 
         .hero-content h1 {
-            font-size: 4rem;
+            font-size: clamp(1.8rem, 6vw, 4rem);
             line-height: 1.1;
             margin-bottom: 24px;
+            overflow-wrap: break-word;
+            word-break: break-word;
         }
 
         .hero-content p {
-            font-size: 1.25rem;
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
             color: var(--text-secondary);
             margin-bottom: 40px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            overflow-wrap: break-word;
         }
 
         .hero-btns {
@@ -304,11 +320,11 @@
 
         .trust-bar {
             display: flex;
-            gap: 40px;
+            gap: 24px 40px;
             justify-content: center;
             flex-wrap: wrap;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-secondary);
         }
 
@@ -799,7 +815,6 @@
 
         /* Mobile Adjustments */
         @media (max-width: 1024px) {
-            .hero-content h1 { font-size: 3rem; }
             .case-study { grid-template-columns: 1fr; }
             .case-study:nth-child(even) { direction: ltr; }
             .timeline { flex-direction: column; }
@@ -809,9 +824,15 @@
         }
 
         @media (max-width: 768px) {
+            :root { --header-h: 110px; }
             .nav-links { display: none; }
-            .hero-content h1 { font-size: 2.5rem; }
             .hero-btns { flex-direction: column; }
+            .trust-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                font-size: 0.8rem;
+            }
             .faq-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; gap: 40px; }
             .contact-info h2 { font-size: 2.5rem; }
@@ -1983,7 +2004,7 @@
                 "p2_de": "Bielefeld — Panneaux acoustiques.",
                 "p3_de": "Sande — Gare : passage souterrain.",
                 "p4_de": "Magdeburg — Tramway : rénovation intersection.",
-                "p5_de": "Lübeck — Port : extension terminal KV.",
+                "p5_de": "Heeslingen — rénovation d'un tronçon ferroviaire (4 km) avec pose de voies en tolérance millimétrique.",
                 "p1_no": "Strusshamn — Étanchéité et cloisons.",
                 "p2_no": "Bergen — Résidentiel : préfabriqués et toit bois.",
                 "p3_no": "Bergen — Protection incendie cages d'escalier.",
@@ -2095,10 +2116,16 @@
                 "case_1_stat_2_val": "Construcción e Instalaciones",
                 "case_1_challenge_p": "Ejecución compleja para dealer premium.",
                 "case_1_result_p": "Entrega llave en mano — estándar Velor.",
-                "case_2_accent": "Heeslingen 🇩🇪",
-                "case_2_h3": "Infraestructura Terminal",
-                "case_2_stat_1_label": "Precisión",
-                "case_2_stat_1_val": "± 1 mm",
+                "case_2_accent": "Lübeck, Skandinavienkai 🇩🇪",
+                "case_2_h3": "Ampliación de vías — terminal intermodal",
+                "case_2_stat_1_label": "Terminal KV",
+                "case_2_stat_1_val": "Transporte combinado ferroviario-marítimo",
+                "case_2_stat_2_label": "Ciclo completo",
+                "case_2_stat_2_val": "Demolición → nueva infraestructura",
+                "case_2_challenge_p": "Ampliación de vías en terminal portuario activo — conflictos con infraestructura existente y logística operativa.",
+                "case_2_solution_p": "Demolición de infraestructura existente, movimiento de tierras y drenaje, construcción del nuevo trazado coordinada con la actividad del terminal.",
+                "case_2_result_p": "Nuevas vías integradas en el sistema existente sin interrupción de las operaciones portuarias.",
+                "p5_de": "Heeslingen — renovación de tramo ferroviario (4 km) con instalación de vías en tolerancia milimétrica.",
                 "case_3_accent": "Bergen 🇳🇴",
                 "case_3_h3": "Media City Bergen",
                 "other_projects_title": "Otros Proyectos",
@@ -2192,14 +2219,16 @@
                 "case_1_solution_p": "Координация собственных бригад и субподрядчиков: сталь, электрика, сантехника, полы, отделка, ППО двери, благоустройство.",
                 "case_1_result_label": "Результат:",
                 "case_1_result_p": "Объект сдан под ключ — объем работ идентичен генподряду Велор.",
-                "case_2_accent": "Хеслинген 🇩🇪",
-                "case_2_h3": "Ж/Д Инфраструктура терминала",
-                "case_2_stat_1_label": "Точность",
-                "case_2_stat_1_val": "± 1 мм",
-                "case_2_stat_2_label": "Масштаб",
-                "case_2_stat_2_val": "4 км путей",
-                "case_2_challenge_p": "Строительство 4 км путей с экстремальными допусками для автоматики.",
-                "case_2_result_p": "Полное соответствие нормам DB (Deutsche Bahn).",
+                "case_2_accent": "Любек, Скандинавиенкай 🇩🇪",
+                "case_2_h3": "Расширение путей интермодального терминала",
+                "case_2_stat_1_label": "Терминал KV",
+                "case_2_stat_1_val": "Комбинированные перевозки море–рельс",
+                "case_2_stat_2_label": "Полный цикл",
+                "case_2_stat_2_val": "Демонтаж → новая инфраструктура",
+                "case_2_challenge_p": "Расширение путей в действующем портовом терминале — конфликты с существующей инфраструктурой и логистикой оператора.",
+                "case_2_solution_p": "Демонтаж существующей инфраструктуры, земляные и дренажные работы, строительство новой путевой системы в координации с работой терминала.",
+                "case_2_result_p": "Новые пути интегрированы в существующую систему без остановки портовых операций.",
+                "p5_de": "Хеслинген — реновация ж/д участка (4 км) с укладкой пути в миллиметровом допуске.",
                 "case_3_accent": "Берген 🇳🇴",
                 "case_3_h3": "Media City Bergen — Фасады и отделка",
                 "other_projects_title": "Другие проекты команды",
@@ -2325,14 +2354,16 @@
                 "case_1_solution_p": "Координація власних бригад та субпідрядників: сталь, електрика, сантехніка, оздоблення, благоустрій.",
                 "case_1_result_label": "Результат:",
                 "case_1_result_p": "Об'єкт здано під ключ — обсяг робіт ідентичний генпідряду Велор.",
-                "case_2_accent": "Хеслінген 🇩🇪",
-                "case_2_h3": "Залізнична інфраструктура терміналу",
-                "case_2_stat_1_label": "Точність",
-                "case_2_stat_1_val": "± 1 мм",
-                "case_2_stat_2_label": "Масштаб",
-                "case_2_stat_2_val": "4 км колій",
-                "case_2_challenge_p": "Будівництво 4 км колій з екстремальними допусками для автоматики.",
-                "case_2_result_p": "Повна відповідність нормам DB (Deutsche Bahn).",
+                "case_2_accent": "Любек, Скандинавієнкай 🇩🇪",
+                "case_2_h3": "Розширення колій інтермодального терміналу",
+                "case_2_stat_1_label": "Термінал KV",
+                "case_2_stat_1_val": "Комбіновані перевезення море–залізниця",
+                "case_2_stat_2_label": "Повний цикл",
+                "case_2_stat_2_val": "Демонтаж → нова інфраструктура",
+                "case_2_challenge_p": "Подовження колій у діючому портовому терміналі — конфлікти з наявною інфраструктурою та поточною логістикою оператора.",
+                "case_2_solution_p": "Демонтаж наявної інфраструктури, земляні та дренажні роботи, будівництво нової колійної системи у координації з роботою терміналу.",
+                "case_2_result_p": "Нові колії інтегровані в існуючу систему без зупинки портових операцій.",
+                "p5_de": "Хеслінген — реновація залізничної ділянки (4 км) з укладанням колій у міліметровому допуску.",
                 "case_3_accent": "Берген 🇳🇴",
                 "case_3_h3": "Media City Bergen — Фасади та оздоблення",
                 "other_projects_title": "Інші проекти команди",
