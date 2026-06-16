@@ -41,7 +41,8 @@
             --nav-link: #FFFFFF;
             --logo-color: #E8E8E8;
 
-            /* Spacing */
+            /* Layout */
+            --header-h: 80px;
             --container-width: 1200px;
             --section-padding: 100px 20px;
             --header-h: 80px;
@@ -57,8 +58,8 @@
             --card-bg: #F5F5F5;
             --header-bg: rgba(255, 255, 255, 0.95);
             --nav-link: #1A1A1A;
-            --border-color: rgba(158, 27, 50, 0.05);
-            --logo-color: var(--accent-red);
+            --border-color: rgba(255, 49, 49, 0.05);
+            --logo-color: #9E1B32;
         }
 
         * {
@@ -109,6 +110,15 @@
 
         ul {
             list-style: none;
+        }
+
+        /* Global anchor offset so fixed header never covers section titles */
+        html {
+            scroll-padding-top: var(--header-h);
+        }
+
+        section[id], [id]:target {
+            scroll-margin-top: var(--header-h);
         }
 
         .container {
@@ -276,7 +286,8 @@
             background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('https://images.unsplash.com/photo-1504307651254-3b1686fff3a4?auto=format&fit=crop&q=80&w=2000');
             background-size: cover;
             background-position: center;
-            padding: calc(var(--header-h) + 40px) 20px 60px;
+            padding-top: calc(var(--header-h) + 24px);
+            padding-bottom: 40px;
         }
 
         [data-theme="light"] #hero {
@@ -302,6 +313,7 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            overflow-wrap: break-word;
         }
 
         .hero-btns {
@@ -813,7 +825,6 @@
 
         /* Mobile Adjustments */
         @media (max-width: 1024px) {
-            .hero-content h1 { font-size: 3rem; }
             .case-study { grid-template-columns: 1fr; }
             .case-study:nth-child(even) { direction: ltr; }
             .timeline { flex-direction: column; }
@@ -828,6 +839,12 @@
             .hero-content h1 { font-size: clamp(2rem, 10vw, 2.5rem); }
             .trust-bar { flex-direction: column; align-items: center; gap: 15px; }
             .hero-btns { flex-direction: column; }
+            .trust-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                font-size: 0.8rem;
+            }
             .faq-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; gap: 20px 40px; }
             .contact-info h2 { font-size: clamp(2rem, 10vw, 2.5rem); }
